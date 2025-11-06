@@ -2,28 +2,39 @@
 import data from '@/app/data/data.json';
 
 export default function Projects() {
-  const projects = data.projects;
-
   return (
-    <section id="projects" className="w-full flex flex-col items-center px-2 py-5">
-      <div className="max-w-6xl w-full">
-        <h2 className="bg-[#2055ae] text-white py-4 px-8 text-3xl font-bold rounded-t-xl shadow mb-0 drop-shadow flex items-center">
-          Proyectos
-        </h2>
-        <div className="bg-white shadow rounded-b-xl pt-6 pb-8 px-6">
-          <h3 className="font-bold text-xl mb-2">Mi Proyectos</h3>
-          <p className="text-gray-600 mb-4">Algunos trabajos destacados</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {projects.map((proj, idx) => (
-              <div key={idx} className="bg-[#f7f8fa] rounded-xl shadow-lg p-4 border border-gray-200 flex flex-col items-center">
-                <img src={proj.image} alt={proj.title} className="rounded-md shadow mb-2 h-32 w-full object-cover" />
-                <h4 className="font-semibold mb-1 text-center">{proj.title}</h4>
-                <p className="text-gray-600 mb-3 text-center text-sm">{proj.description}</p>
-                <a href={proj.demo} target="_blank" rel="noopener noreferrer"
-                  className="border-2 border-blue-700 px-5 py-1.5 bg-white rounded-lg text-blue-700 hover:bg-blue-700 hover:text-white transition text-sm font-semibold shadow mt-1">DEMO</a>
+    <section id="projects" className="bg-[#FAFBFC] max-w-7xl mx-auto px-6 py-10">
+      <h2 className="text-center font-bold text-2xl md:text-3xl mb-1">Mis Proyectos</h2>
+      <p className="text-center mb-8 text-md text-gray-700">Algunos trabajos destacados</p>
+      {/* WRAPPER: overflow-x-auto + flex-nowrap => horizontal en desktop */}
+      <div className="w-full overflow-x-auto">
+        <div className="flex flex-row flex-nowrap gap-[76px] justify-center items-stretch min-w-[900px] md:min-w-0">
+          {data.projects.map((p, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-xl shadow-md flex flex-col items-center border border-gray-200 px-3 py-5 min-w-[210px] max-w-[230px] w-full"
+            >
+              <div className="w-full h-36 mb-3 rounded-xl bg-gray-100 flex items-center justify-center overflow-hidden shadow-sm">
+                <img src={p.image || ""} alt={p.title} className="object-cover w-full h-full rounded-xl" />
               </div>
-            ))}
-          </div>
+              <h3 className="font-semibold text-base text-gray-900 w-full text-left mb-2 mt-1">
+                {p.title}
+              </h3>
+              <p className="text-[14px] text-gray-700 w-full text-left mb-4 leading-relaxed whitespace-pre-line">
+                {p.description}
+              </p>
+              <div className="w-full flex justify-center">
+                <a
+                  href={p.demo || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-blue-400 bg-white px-5 py-1 text-sm rounded-full text-blue-600 font-semibold shadow hover:bg-blue-50 transition-all"
+                >
+                  DEMO
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
