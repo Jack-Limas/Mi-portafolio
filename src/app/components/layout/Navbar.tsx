@@ -1,38 +1,54 @@
+// components/layout/Navbar.tsx
 'use client';
 
-import React from 'react';
-
 const SECTIONS = [
-  { label: "Home", link: "#home" },
-  { label: "Projects", link: "#projects" },
-  { label: "Contact", link: "#contact" },
-  { label: "About Me", link: "#about" },
-  { label: "What I Offer", link: "#offer" },
-  { label: "Experience", link: "#experience" },
-  { label: "Testimonials", link: "#testimonials" }
+  {
+    label: { en: 'Home', es: 'Inicio' },
+    link: '#home',
+  },
+  {
+    label: { en: 'Projects', es: 'Proyectos' },
+    link: '#projects',
+  },
+  {
+    label: { en: 'Contact', es: 'Contacto' },
+    link: '#contact',
+  },
+  {
+    label: { en: 'About Me', es: 'Acerca de mí' },
+    link: '#about',
+  },
+  {
+    label: { en: 'What I Offer', es: 'Lo que ofrezco' },
+    link: '#offer',
+  },
+  {
+    label: { en: 'Experience', es: 'Experiencia' },
+    link: '#experience',
+  },
+  {
+    label: { en: 'Testimonials', es: 'Testimonios' },
+    link: '#testimonials',
+  },
 ];
 
-type NavbarProps = {
-  menuOpen: boolean;
-  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-export default function Navbar({ menuOpen, setMenuOpen }: NavbarProps) {
-  // Usa menuOpen y setMenuOpen donde lo necesites, aquí van de ejemplo:
+export default function Navbar({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   return (
-    <nav className="flex flex-wrap justify-center gap-4 text-base md:text-lg font-medium py-4">
-      {SECTIONS.map((sec, i) => (
-        <a
-          key={i}
-          href={sec.link}
-          className="hover:underline underline-offset-4 px-2 transition-colors"
-        >{sec.label}</a>
-      ))}
-      {/* Ejemplo botón menú móvil:
-      <button onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? "Cerrar menú" : "Abrir menú"}
-      </button>
-      */}
-    </nav>
+    <header className="bg-blue-700 text-white shadow ">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between py-2">
+        <h1 className="font-bold text-2xl md:text-3xl tracking-tight w-full md:w-auto">Mi Portafolio</h1>
+        <nav className="flex-1 flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-base font-medium mt-2 md:mt-0">
+          {SECTIONS.map((section) => (
+            <a
+              key={section.link}
+              href={section.link}
+              className="hover:underline underline-offset-4 px-2 transition-colors"
+            >
+              {section.label[lang]}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }
