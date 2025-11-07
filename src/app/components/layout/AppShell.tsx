@@ -14,7 +14,7 @@ export default function AppShell({ children }: { children: ReactNode }) {
   return (
     <>
       <header className="w-full shadow-md sticky top-0 z-10 bg-blue-700 text-white">
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Navbar {...({ menuOpen, setMenuOpen } as any)} />
         <div className="flex justify-end gap-4 px-4 py-1 items-center">
           <LanguageToggle onChange={(lang) => setLang(lang as "en" | "es")} />
           <ThemeToggle value={theme} onChange={(t) => setTheme(t as "light" | "dark" | "system")} />
