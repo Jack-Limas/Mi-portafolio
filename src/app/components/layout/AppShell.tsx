@@ -6,7 +6,6 @@ import Navbar from '@/app/components/layout/Navbar';
 import { ReactNode, useState } from 'react';
 
 export default function AppShell({ children }: { children: ReactNode }) {
-  // 👇 Aquí puedes poner tus estados, ya es client component 👇
   const [lang, setLang] = useState<'es' | 'en'>('es');
   const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
   const [menuOpen, setMenuOpen] = useState(false);
