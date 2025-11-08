@@ -1,46 +1,73 @@
 "use client";
+
 import Image from "next/image";
 import data from "@/app/data/data.json";
-import type { AppData } from "@/app/data/types";
 import { useLocale } from "@/hooks/useLocale";
-import Container from "../ui/Container";
 
 export default function Hero() {
   const { locale } = useLocale();
-  const content = (data as any)[locale] as AppData;
-  const hero = content.hero;
+  const t = data[locale].hero;
 
   return (
-    <section id="home" className="bg-[#0B1220] dark:bg-[#071122] text-white">
-      <Container className="grid grid-cols-1 items-center gap-8 py-16 md:grid-cols-2">
+    <section
+      id="home"
+      className="pt-32 pb-20 bg-gray-100 dark:bg-[#0B1220] text-black dark:text-white"
+    >
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6">
+
+        {/* --- TEXT LEFT --- */}
         <div>
-          <h1 className="font-poppins text-3xl md:text-5xl">{hero.title}</h1>
-          <p className="mt-4 text-sm md:text-base text-gray-300">{hero.bio}</p>
+          <h2 className="text-2xl font-bold mb-1">Hola, soy {t.name}</h2>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href={hero.cta.projectsAnchor}
-               className="rounded-xl bg-teal-500 px-4 py-2 text-sm font-medium text-white hover:bg-teal-400">
-              {locale === "en" ? "View projects" : "Ver proyectos"}
-            </a>
-            <a href={hero.cta.cv}
-               className="rounded-xl border border-white/20 px-4 py-2 text-sm font-medium hover:bg-white/10">
-              {locale === "en" ? "Download CV" : "Descargar CV"}
-            </a>
-          </div>
+          <p className="text-gray-700 dark:text-gray-300 text-base mb-4">
+            {t.title}
+          </p>
 
-          <ul className="mt-6 flex flex-wrap gap-2 text-xs text-gray-300">
-            {hero.skills.map(s => (
-              <li key={s} className="rounded-full border border-white/15 px-3 py-1">{s}</li>
+          <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            {t.description}
+          </p>
+
+          <h3 className="text-lg font-bold mb-3">Algunos de mis talentos</h3>
+
+          <ul className="space-y-2 mb-6">
+            {t.talents.map((talent: string, index: number) => (
+              <li key={index} className="text-gray-700 dark:text-gray-300">
+                {talent}
+              </li>
             ))}
           </ul>
-        </div>
 
-        <div className="flex justify-center md:justify-end">
-          <div className="relative h-60 w-60 overflow-hidden rounded-full ring-2 ring-teal-400/40 md:h-72 md:w-72">
-            <Image src={hero.photo} alt={hero.name} fill className="object-cover" priority />
+          <div className="flex gap-4">
+            <a
+              href="#projects"
+              className="px-4 py-2 rounded-md bg-[#1E40AF] text-white shadow-md"
+            >
+              Ver Proyectos
+            </a>
+
+            <a
+              href="#contact"
+              className="px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-700 shadow-md"
+            >
+              Contáctame
+            </a>
           </div>
         </div>
-      </Container>
+
+        {/* --- IMAGE RIGHT (MOBILE → ABAJO) --- */}
+        <div className="flex justify-center md:justify-end">
+          <div className="rounded-full overflow-hidden border-4 border-[#1E40AF] w-64 h-64 md:w-80 md:h-80">
+            <Image
+              src={t.profileImage}
+              alt="profile"
+              width={400}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+
+      </div>
     </section>
   );
 }
