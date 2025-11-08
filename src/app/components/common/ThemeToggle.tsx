@@ -1,30 +1,19 @@
-'use client';
+"use client";
+import { useThemeMode, ThemeMode } from "@/hooks/useTheme";
 
-import { Theme } from '../../../hooks/useTheme';
+export default function ThemeToggle() {
+  const { mode, setMode } = useThemeMode();
+  const next: ThemeMode = mode === "light" ? "dark" : mode === "dark" ? "system" : "light";
+  const label = mode === "light" ? "☀️" : mode === "dark" ? "🌙" : "🖥️";
 
-type ThemeToggleProps = {
-  value: Theme;
-  onChange: (theme: Theme) => void;
-};
-
-const icons = {
-  light: '🌞',
-  dark: '🌜',
-  system: '💻'
-};
-
-export function ThemeToggle({ value, onChange }: ThemeToggleProps) {
   return (
-    <div className="flex gap-2 items-center ml-2">
-      {Object.entries(icons).map(([key, icon]) =>
-        <button
-          key={key}
-          aria-label={`Switch to ${key} mode`}
-          onClick={() => onChange(key as Theme)}
-          className={`text-xl px-2 py-1 rounded ${value === key ? 'bg-blue-600 text-white' : 'bg-gray-100 dark:bg-gray-700'}`}>
-          {icon}
-        </button>
-      )}
-    </div>
+    <button
+      onClick={() => setMode(next)}
+      className="rounded-xl border px-3 py-1 text-xs font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+      aria-label="Toggle theme"
+      title={`Theme: ${mode}`}
+    >
+      {label}
+    </button>
   );
 }

@@ -1,54 +1,42 @@
-// components/layout/Navbar.tsx
-'use client';
+"use client";
+import Link from "next/link";
+import Container from "../ui/Container";
+import LanguageToggle from "../common/LanguageToggle";
+import ThemeToggle from "../common/ThemeToggle";
+import data from "@/app/data/data.json";
+import { useLocale } from "@/hooks/useLocale";
 
-const SECTIONS = [
-  {
-    label: { en: 'Home', es: 'Inicio' },
-    link: '#home',
-  },
-  {
-    label: { en: 'Projects', es: 'Proyectos' },
-    link: '#projects',
-  },
-  {
-    label: { en: 'Contact', es: 'Contacto' },
-    link: '#contact',
-  },
-  {
-    label: { en: 'About Me', es: 'Acerca de mí' },
-    link: '#about',
-  },
-  {
-    label: { en: 'What I Offer', es: 'Lo que ofrezco' },
-    link: '#offer',
-  },
-  {
-    label: { en: 'Experience', es: 'Experiencia' },
-    link: '#experience',
-  },
-  {
-    label: { en: 'Testimonials', es: 'Testimonios' },
-    link: '#testimonials',
-  },
-];
+export default function Navbar() {
+  const { locale } = useLocale();
+  const d = data[locale];
 
-export default function Navbar({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const nav = [
+    { href: "#home", label: locale === "en" ? "Home" : "Inicio" },
+    { href: "#about", label: locale === "en" ? "About" : "Acerca" },
+    { href: "#projects", label: locale === "en" ? "Projects" : "Proyectos" },
+    { href: "#experience", label: locale === "en" ? "Experience" : "Experiencia" },
+    { href: "#testimonials", label: locale === "en" ? "Testimonials" : "Testimonios" },
+    { href: "#contact", label: locale === "en" ? "Contact" : "Contacto" },
+  ];
+
   return (
-    <header className="bg-blue-700 text-white shadow ">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between py-2">
-        <h1 className="font-bold text-2xl md:text-3xl tracking-tight w-full md:w-auto">Mi Portafolio</h1>
-        <nav className="flex-1 flex flex-wrap justify-center gap-4 md:gap-6 text-sm md:text-base font-medium mt-2 md:mt-0">
-          {SECTIONS.map((section) => (
-            <a
-              key={section.link}
-              href={section.link}
-              className="hover:underline underline-offset-4 px-2 transition-colors"
-            >
-              {section.label[lang]}
+    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur dark:bg-[#0B1220]/80">
+      <Container className="flex items-center justify-between py-3">
+        <Link href="#home" className="font-semibold">
+          {d.site.title}
+        </Link>
+        <nav className="hidden gap-6 md:flex">
+          {nav.map(n => (
+            <a key={n.href} href={n.href} className="text-sm text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white">
+              {n.label}
             </a>
           ))}
         </nav>
-      </div>
+        <div className="flex items-center gap-2">
+          <LanguageToggle />
+          <ThemeToggle />
+        </div>
+      </Container>
     </header>
   );
 }

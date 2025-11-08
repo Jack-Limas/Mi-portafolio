@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Referencia explícita de clases para forzar compilación Tailwind: */
-/* bg-primary border-accent text-accent */
-
 :root {
   --bg: #F9FAFB;
   --text: #111827;
@@ -27,18 +24,19 @@ html, body {
 }
 
 .btn-primary {
-  /* 👇 Obligatorio: el comentario al inicio del archivo fuerza el build */
   background-color: var(--primary);
-  color: white;
+  color: #ffffff;
+.btn-outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
   border-radius: 0.5rem;
   padding: 0.75rem 1.25rem;
   font-weight: 500;
-  transition-property: transform;
-  transition-duration: 150ms;
+}
+  transition: transform 150ms;
 }
 .btn-outline {
-  border-width: 2px;
-  border-color: var(--accent);
+  border: 2px solid var(--accent);
   color: var(--accent);
   border-radius: 0.5rem;
   padding: 0.75rem 1.25rem;
@@ -47,3 +45,7 @@ html, body {
 .card-shadow {
   box-shadow: 0 8px 24px rgba(11,18,32,0.06);
 }
+
+/* small helpers for headings to match figma scale */
+.h1 { font-size: 2.25rem; line-height: 1.05; } /* 36px */
+.h2 { font-size: 1.5rem; } /* 24px */

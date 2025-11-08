@@ -1,30 +1,28 @@
-'use client';
-import data from '@/app/data/data.json';
+"use client";
+import data from "@/app/data/data.json";
+import type { AppData } from "@/app/data/types";
+import { useLocale } from "@/hooks/useLocale";
+import Container from "../ui/Container";
 
 export default function Experience() {
-  const experience = data.experience;
+  const { locale } = useLocale();
+  const d = (data as any)[locale] as AppData;
 
   return (
-    <section id="experience" className="w-full flex flex-col items-center px-2 py-5">
-      <div className="max-w-6xl w-full">
-        <h2 className="bg-[#2055ae] text-white py-4 px-8 text-3xl font-bold rounded-t-xl shadow mb-0 drop-shadow flex items-center">
-          Experiencia
-        </h2>
-        <div className="bg-white shadow rounded-b-xl pt-6 pb-8 px-6">
-          <h3 className="font-bold text-xl mb-2 mt-1">Experiencia</h3>
-          <p className="text-gray-600 mb-4">
-            Mi recorrido apenas empieza, pero cada paso ha permitido aprender y crecer, tanto en lo personal como en lo profesional. Estas son algunas de las experiencias más importantes:
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {experience.map((exp, idx) => (
-              <div key={idx} className="bg-[#f5f6fa] rounded-xl shadow-md p-4 border border-gray-200">
-                <div className="font-bold mb-1">{exp.title}</div>
-                <div className="text-base">{exp.description}</div>
-              </div>
-            ))}
-          </div>
+    <section id="experience" className="py-14">
+      <Container>
+        <h2 className="text-2xl font-semibold">{locale === "en" ? "Experience" : "Experiencia"}</h2>
+
+        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {d.experience.map((e, i) => (
+            <div key={i} className="rounded-2xl border p-5 dark:border-white/10">
+              <div className="text-xs text-gray-500">{e.year}</div>
+              <div className="mt-1 font-medium">{e.title}</div>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{e.desc}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

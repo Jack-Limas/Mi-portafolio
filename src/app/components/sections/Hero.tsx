@@ -1,62 +1,46 @@
-'use client';
-import data from '@/app/data/data.json';
+"use client";
+import Image from "next/image";
+import data from "@/app/data/data.json";
+import type { AppData } from "@/app/data/types";
+import { useLocale } from "@/hooks/useLocale";
+import Container from "../ui/Container";
 
 export default function Hero() {
-  return (
-    <section
-      id="home"
-      className="bg-[#FAFBFC] min-h-[600px] flex items-center justify-center w-full py-12"
-    >
-      <div className="relative max-w-6xl w-full flex flex-col items-start">
-        {/* Foto óvalo flotante, ajustado a lo pedido */}
-        <span
-          style={{
-            width: '440px',
-            height: '440px',
-            position: 'absolute',
-            top: '-0px',      
-            left: '775px',      
-            zIndex: 10,
-            background: '#F9FBFD',
-            boxShadow: '0 10px 32px 0 rgba(0,32,128,0.13)'
-          }}
-          className="rounded-full overflow-hidden border-4 border-blue-200 flex items-center justify-center shadow"
-        >
-          <img
-            src={data.hero.profileImage}
-            alt="Jack Limas"
-            className="object-cover w-[420px] h-[420px] md:w-[440px] md:h-[440px] rounded-full"
-          />
-        </span>
+  const { locale } = useLocale();
+  const content = (data as any)[locale] as AppData;
+  const hero = content.hero;
 
-        {/* Texto principal */}
-        <div className="bg-[#F2F4F7] rounded-2xl shadow-lg p-10 flex flex-col min-h-[480px] justify-between max-w-[630px] w-full z-20">
-          <h2 className="font-bold text-3xl mb-3 text-gray-900 text-left">Hola, soy {data.hero.name}</h2>
-          <p className="mb-2 text-gray-800 text-lg font-semibold text-left">{data.hero.subtitle}</p>
-          <p className="mb-5 text-gray-700 text-base whitespace-pre-line leading-relaxed text-left">
-            {data.hero.description}
-          </p>
-          <h3 className="font-bold text-xl mb-4 mt-4 text-gray-900 text-left">Algunos de mis talentos</h3>
-          <ul className="mb-7 text-gray-700 text-base flex flex-col gap-4">
-            {data.hero.talents.map((talent, idx) => (
-              <li key={idx} className="px-4 py-3 bg-[#F6FBFF] rounded-xl shadow font-medium text-lg text-left">
-                {talent}
-              </li>
+  return (
+    <section id="home" className="bg-[#0B1220] dark:bg-[#071122] text-white">
+      <Container className="grid grid-cols-1 items-center gap-8 py-16 md:grid-cols-2">
+        <div>
+          <h1 className="font-poppins text-3xl md:text-5xl">{hero.title}</h1>
+          <p className="mt-4 text-sm md:text-base text-gray-300">{hero.bio}</p>
+
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a href={hero.cta.projectsAnchor}
+               className="rounded-xl bg-teal-500 px-4 py-2 text-sm font-medium text-white hover:bg-teal-400">
+              {locale === "en" ? "View projects" : "Ver proyectos"}
+            </a>
+            <a href={hero.cta.cv}
+               className="rounded-xl border border-white/20 px-4 py-2 text-sm font-medium hover:bg-white/10">
+              {locale === "en" ? "Download CV" : "Descargar CV"}
+            </a>
+          </div>
+
+          <ul className="mt-6 flex flex-wrap gap-2 text-xs text-gray-300">
+            {hero.skills.map(s => (
+              <li key={s} className="rounded-full border border-white/15 px-3 py-1">{s}</li>
             ))}
           </ul>
-          {/* Botones 3cm (114px) separados y rodeados */}
-          <div className="flex pt-6 justify-start" style={{ gap: '114px' }}>
-            <a
-              href="#projects"
-              className="rounded-2xl bg-white border-2 border-blue-400 px-10 py-3 text-base text-blue-700 font-semibold shadow transition-all hover:bg-blue-50 hover:border-blue-600"
-            >Ver Proyectos</a>
-            <a
-              href="#contact"
-              className="rounded-2xl bg-white border-2 border-blue-400 px-10 py-3 text-base text-blue-700 font-semibold shadow transition-all hover:bg-blue-50 hover:border-blue-600"
-            >Contáctame</a>
+        </div>
+
+        <div className="flex justify-center md:justify-end">
+          <div className="relative h-60 w-60 overflow-hidden rounded-full ring-2 ring-teal-400/40 md:h-72 md:w-72">
+            <Image src={hero.photo} alt={hero.name} fill className="object-cover" priority />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -1,158 +1,103 @@
 {
-  "hero": {
-    "name": "Jack Anderson Limas Solarte",
-    "subtitle": "I build software that solves real-world problems",
-    "description": "Software Engineering student, passionate about web development and digital solutions. Detail-oriented, a constant learner, able to turn ideas into functional projects.",
-    "talents": [
-      "Logical thinking and problem-solving 💡",
-      "Self-learning and discipline 📚",
-      "Sincerity and humility 🤝"
-    ],
-    "profileImage": "/images/Captura de pantalla 2025-09-25 201305.png",
-    "cvLink": "link-to-cv.pdf"
-  },
-
-  "about": {
-    "mainTitle": "About Me",
-    
-    "description": "👋 I'm Jack Limas, 19 years old, from Pasto, Colombia. I'm curious, observant, and focused, calm knowing where I'm headed and with a clear purpose. I value my surroundings, from my family to loyal friends, 'Loyalty is a two-way street. If you ask for it, you'll get it from me.' In my free time I like to do a bit of everything or simply enjoy the moment. I enjoy mixing visuals and logic, and love solving and designing things, especially programming.",
-    "story": "I chose Software Engineering because I've always been curious about how technology can change lives. Today I see it as a way to create, innovate and take ideas to another level. I always wondered how things worked, and now I see it as a way to build the future.",
-    "photo": "/images/profile-about.jpg",
-    "hobbies": [
+  "en": {
+    "site": { "title": "Jack Limas", "year": 2025 },
+    "hero": {
+      "name": "Jack Limas",
+      "title": "I build software that solves real problems.",
+      "bio": "Software Engineering student passionate about web development and design. I blend logic and creativity to build meaningful digital experiences.",
+      "photo": "/images/hero-photo.jpg",
+      "cta": { "projectsAnchor": "#projects", "cv": "/resume.pdf" },
+      "skills": ["TypeScript","Angular","Tailwind","Figma"]
+    },
+    "about": {
+      "short": "Curious, focused and creative. I value loyalty, family and a few close friends.",
+      "hobbies": [
+        { "title": "Music", "text": "Trap, rap and classics — a playlist for every moment." },
+        { "title": "Travel", "text": "Visited Cartagena, Medellín, Cali, Armenia and Ecuador." },
+        { "title": "Football", "text": "I play football — it keeps me disciplined and energetic." },
+        { "title": "Tech", "text": "I explore VR and fintechs like Nequi; I love new tech." },
+        { "title": "Gaming", "text": "I like testing new games and experiences." }
+      ]
+    },
+    "projects": [
       {
-        "image": "/images/hobby-music.jpg",
-        "description": "Trap, rap, classics, and more; I love discovering new genres and always have a playlist for every moment. 🎵"
+        "id": "comandas",
+        "title": "Comandas Digitales",
+        "description": "Digital order system for restaurants that optimizes order management and customer experience.",
+        "image": "/images/proj-comandas.webp",
+        "tags": ["TypeScript","Next.js","Tailwind"],
+        "demo": "#",
+        "repo": "#"
       },
       {
-        "image": "/images/hobby-travel.jpg",
-        "description": "I've been to many cities, each leaving a story and new way of seeing life. 🌎"
+        "id": "ticket-system",
+        "title": "Automatic Ticketing System",
+        "description": "Train ticket auto-issuing concept with UML and architecture diagrams.",
+        "image": "/images/proj-ticket.webp",
+        "tags": ["Design","UML","Architecture"],
+        "demo": "#",
+        "repo": "#"
       },
       {
-        "image": "/images/hobby-sports.jpg",
-        "description": "Not just a fan—I play; on the court, I find discipline, passion and fun. ⚽"
-      },
-      {
-        "image": "/images/hobby-tech.jpg",
-        "description": "From VR to fintechs like Nequi, I’m drawn to what transforms how we live. 🚀"
-      },
-      {
-        "image": "/images/hobby-gaming.jpg",
-        "description": "I don’t stick to one game; discovering and living each digital experience as if it were new. 🎮"
+        "id": "pc-config",
+        "title": "PC Configurator",
+        "description": "Interactive PC configurator built with Angular applying the Decorator pattern.",
+        "image": "/images/proj-config.webp",
+        "tags": ["Angular","TypeScript","UI"],
+        "demo": "#",
+        "repo": "#"
       }
-    ]
+    ],
+    "testimonials": [
+      { "id": "t1", "name": "Laura Martínez", "role": "Classmate", "avatar": "/images/avatar-laura.jpg", "text": "Working with Jack is motivating — he brings creativity and always helps the team move forward." },
+      { "id": "t2", "name": "Andrés Gómez", "role": "Team Member", "avatar": "/images/avatar-andres.jpg", "text": "Jack combines programming skill with design sense; his practical solutions speed up projects." },
+      { "id": "t3", "name": "Camila Torres", "role": "Friend", "avatar": "/images/avatar-camila.jpg", "text": "I highlight Jack's dedication — he makes learning and collaborating enjoyable." }
+    ],
+    "experience": [
+      { "year": "2024", "title": "University Volunteer", "desc": "Participated in volunteer activities; improved teamwork and leadership." },
+      { "year": "2023", "title": "Stylish Brands", "desc": "Built store website and integrated inventory management." },
+      { "year": "2022", "title": "Academic Projects", "desc": "Multiple projects and scripts to strengthen programming fundamentals." }
+    ],
+    "contact": { "email": "jack.limas@email.com", "phone": "+57 316 171 5563", "social": { "github": "#", "linkedin": "#", "instagram": "#" } },
+    "footer": { "copy": "© 2025 Jack Limas – All rights reserved." }
   },
 
-  "offer": {
-    "mainTitle": "Why choose me?",
-    "qualities": [
-      "Commitment and responsibility 🦸",
-      "Creativity and innovation 🌟",
-      "Teamwork 🤝",
-      "Quick delivery ⚡"
+  "es": {
+    "site": { "title": "Jack Limas", "year": 2025 },
+    "hero": {
+      "name": "Jack Limas",
+      "title": "Construyo software que resuelve problemas reales.",
+      "bio": "Estudiante de Ingeniería de Software apasionado por desarrollo web y diseño. Combino lógica y creatividad para crear experiencias digitales útiles.",
+      "photo": "/images/hero-photo.jpg",
+      "cta": { "projectsAnchor": "#projects", "cv": "/resume.pdf" },
+      "skills": ["TypeScript","Angular","Tailwind","Figma"]
+    },
+    "about": {
+      "short": "Curioso, enfocado y creativo. Valoro la lealtad, la familia y algunos amigos cercanos.",
+      "hobbies": [
+        { "title": "Música", "text": "Trap, rap y clásicos — una playlist para cada momento." },
+        { "title": "Viajar", "text": "He visitado Cartagena, Medellín, Cali, Armenia y Ecuador." },
+        { "title": "Fútbol", "text": "Juego fútbol — me mantiene disciplinado y en forma." },
+        { "title": "Tecnología", "text": "Exploro VR y fintechs como Nequi; me encanta la tecnología nueva." },
+        { "title": "Videojuegos", "text": "Disfruto probar juegos y experiencias nuevas." }
+      ]
+    },
+    "projects": [
+      { "id": "comandas", "title": "Comandas Digitales", "description": "Sistema de comandas digitales para restaurantes que optimiza la gestión de pedidos.", "image": "/images/proj-comandas.webp", "tags": ["TypeScript","Next.js","Tailwind"], "demo": "#", "repo": "#" },
+      { "id": "ticket-system", "title": "Sistema de Tickets", "description": "Diseño de sistema de tickets para trenes con diagramas UML.", "image": "/images/proj-ticket.webp", "tags": ["Diseño","UML","Arquitectura"], "demo": "#", "repo": "#" },
+      { "id": "pc-config", "title": "Configurador PC", "description": "Configurador de PC interactivo construido con Angular.", "image": "/images/proj-config.webp", "tags": ["Angular","TypeScript","UI"], "demo": "#", "repo": "#" }
     ],
-    "description": "I'm passionate about technology and design. I'm known for my commitment in every project, finding practical, creative and functional solutions. I enjoy teamwork, adapting to challenges and bringing innovation to each stage of development. My goal is to deliver high-quality results that exceed expectations.",
-
-    "skillsTitle": "Technologies I master",
-    "skills": [
-      "HTML & CSS — for structure and style",
-      "JavaScript & TypeScript — for interactivity and dynamic solutions",
-      "Angular — scalable, efficient web applications",
-      "Figma — interface design and rapid prototyping",
-      "GitHub — version control and collaborative work"
-    ]
-  },
-
-  "projects": [
-    {
-      "image": "/images/project-train.jpg",
-      "title": "Automated Train Ticket System",
-      "description": "Academic project designing a system for automatic train ticket management. Includes class diagrams, user stories and architecture planning. Focused on principles of object-oriented design and software patterns.",
-      "demo": "https://link-to-train-demo.com"
-    },
-    {
-      "image": "/images/project-pc.jpg",
-      "title": "PC Gaming Configurator (Angular + TypeScript)",
-      "description": "Developed an interactive application allowing PC gamer configuration. Used Angular, TypeScript, CSS, HTML with the Decorator pattern for dynamic interfaces and modular architecture.",
-      "demo": "https://link-to-pc-demo.com"
-    },
-    {
-      "image": "/images/project-spotify.jpg",
-      "title": "Spotify Style Playlist (TypeScript)",
-      "description": "Desktop/web app in TypeScript with linked lists for playlist management. Inspired by Spotify UI, focusing on data structures and interface design.",
-      "demo": "https://link-to-spotify-demo.com"
-    }
-  ],
-
-  "experience": [
-    {
-      "title": "Final Project — Digital Orders",
-      "description": "Currently developing a digital order system for restaurants to optimize order management and improve customer experience. 📱"
-    },
-    {
-      "title": "University Volunteer",
-      "description": "Volunteered at my university, strengthening teamwork, communication and leadership skills while adding value to the environment. 🤝"
-    },
-    {
-      "title": "Seminars & Conferences",
-      "description": "Attended various technology seminars focused on development and trends, broadening my vision on innovation’s real-world impact. 🦾"
-    },
-    {
-      "title": "Scripts & Academic Projects",
-      "description": "Created scripts, programs and web pages, solidifying my programming skills, learning modern technologies, and building practical digital experiences. 💻"
-    },
-    {
-      "title": "Stylish Brands — Urban Fashion Store",
-      "description": "Created an urban fashion brand and e-commerce site, integrating design, programming and business management. 🛍️"
-    }
-  ],
-
-  "testimonials": [
-    {
-      "quote": "Jack has incredible talent for programming and design. In group work, he always brings quick, practical solutions that move the team forward.",
-      "author": "Juan David Maya",
-      "image": "/images/testimonial-maya.jpg"
-    },
-    {
-      "quote": "What I value most about Jack is his dedication. You see his passion for what he does and it energizes the rest. Thanks to him, I learned to see programming simply.",
-      "author": "Juan Felpie Mora",
-      "image": "/images/testimonial-felpie.jpg"
-    },
-    {
-      "quote": "Working with Jack is motivating. He brings lots of creative ideas and always aims to improve projects, plus he never hesitates to help others when they're stuck.",
-      "author": "Laura Martínez",
-      "image": "/images/testimonial-laura.jpg"
-    }
-  ],
-
-  "contact": {
-    "description": "You can write me for projects or questions.",
-    "fields": [
-      {"name": "Name", "type": "text", "placeholder": "Your name"},
-      {"name": "Email", "type": "email", "placeholder": "Your email"},
-      {"name": "Message", "type": "textarea", "placeholder": "Your message"}
+    "testimonials": [
+      { "id": "t1", "name": "Laura Martínez", "role": "Compañera", "avatar": "/images/avatar-laura.jpg", "text": "Trabajar con Jack es motivador — aporta creatividad y ayuda al equipo a avanzar." },
+      { "id": "t2", "name": "Andrés Gómez", "role": "Integrante", "avatar": "/images/avatar-andres.jpg", "text": "Jack combina habilidad técnica con sentido del diseño; sus soluciones son prácticas." },
+      { "id": "t3", "name": "Camila Torres", "role": "Colaboradora", "avatar": "/images/avatar-camila.jpg", "text": "Destaco su dedicación — trabaja bien en equipo y aprende rápido." }
     ],
-    "submit": "Send",
-    "socials": [
-      {"name": "LinkedIn", "icon": "/images/social-linkedin.png", "url": "https://linkedin.com/in/jacklimas"},
-      {"name": "Github", "icon": "/images/social-github.png", "url": "https://github.com/jacklimas"},
-      {"name": "Instagram", "icon": "/images/social-instagram.png", "url": "https://instagram.com/jacklimas"},
-      {"name": "WhatsApp", "icon": "/images/social-whatsapp.png", "url": "https://wa.me/573193379372"}
+    "experience": [
+      { "year": "2024", "title": "Voluntariado", "desc": "Participé en actividades de voluntariado que fortalecieron trabajo en equipo." },
+      { "year": "2023", "title": "Stylish Brands", "desc": "Construí la web de la tienda e integré el inventario." },
+      { "year": "2022", "title": "Proyectos Académicos", "desc": "Varios proyectos y scripts para fortalecer fundamentos." }
     ],
-    "photo": "/images/profile-contact.jpg"
-  },
-
-  "footer": {
-    "about": "I am passionate about software development and technological innovation. I love learning new things and applying them to my projects.",
-    "contact": {
-      "email": "jacklimassolarte456@gmail.com",
-      "phone": "+57 3193379372"
-    },
-    "socials": [
-      {"name": "Whatsapp", "icon": "/images/social-whatsapp.png", "url": "https://wa.me/573193379372"},
-      {"name": "Github", "icon": "/images/social-github.png", "url": "https://github.com/jacklimas"},
-      {"name": "LinkedIn", "icon": "/images/social-linkedin.png", "url": "https://linkedin.com/in/jacklimas"},
-      {"name": "Instagram", "icon": "/images/social-instagram.png", "url": "https://instagram.com/jacklimas"}
-    ],
-    "copyright": "© 2025 Jack Limas – All rights reserved"
+    "contact": { "email": "jack.limas@email.com", "phone": "+57 316 171 5563", "social": { "github": "#", "linkedin": "#", "instagram": "#" } },
+    "footer": { "copy": "© 2025 Jack Limas – Todos los derechos reservados." }
   }
 }
