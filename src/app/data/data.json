@@ -1,10 +1,9 @@
 {
   "es": {
-    "site": { 
+    "site": {
       "title": "Mi Portafolio",
       "name": "Jack Anderson Limas Solarte"
     },
-
     "navbar": {
       "home": "Inicio",
       "projects": "Proyectos",
@@ -15,32 +14,54 @@
       "testimonials": "Testimonios",
       "downloadCV": "Descargar CV"
     },
-
     "hero": {
       "greeting": "Hola, soy",
       "name": "Jack Anderson Limas Solarte",
       "title": "Construyo software que resuelve problemas reales",
       "description": "Soy estudiante de Ingeniería de Software en 5° semestre, apasionado por el desarrollo web y la creación de soluciones digitales. Me destaco por mi atención al detalle, el aprendizaje constante y la capacidad de transformar ideas en proyectos funcionales.",
-
       "talentsTitle": "Algunos de mis talentos",
       "talents": [
         "Pensamiento lógico y resolución de problemas 💡",
         "Aprendizaje autónomo y disciplina 📚",
         "Sinceridad y humildad 🤝"
       ],
-
       "profileImage": "/images/portada.jpeg",
       "ctaProjects": "Ver Proyectos",
       "ctaContact": "Contáctame"
+    },
+    "projects": {
+      "title": "Mis Proyectos",
+      "subtitle": "Algunos trabajos destacados",
+      "items": [
+        {
+          "id": 1,
+          "title": "Sistema automático de expedición de billetes de tren",
+          "description": "Proyecto académico en el que diseñé un sistema para la gestión automática de boletos de tren. Incluye diagramas de clases, historias de usuario y el planteamiento de la arquitectura de software. El objetivo fue aplicar principios de diseño orientado a objetos y patrones de desarrollo.",
+          "image": "/images/Proyecto 1.webp",
+          "demo": "#"
+        },
+        {
+          "id": 2,
+          "title": "Configurador de PC Gaming (Angular + TypeScript)",
+          "description": "Desarrollo de una aplicación interactiva que permite al usuario configurar los componentes de un PC gamer. Utiliza Angular, TypeScript, CSS y HTML, aplicando el patrón de diseño Decorator. Este proyecto refuerza la práctica en interfaces dinámicas y arquitectura modular.",
+          "image": "/images/Proyecto 2.jpg",
+          "demo": "#"
+        },
+        {
+          "id": 3,
+          "title": "Lista de reproducción estilo Spotify (TypeScript)",
+          "description": "Aplicación de escritorio/web desarrollada en TypeScript con listas doblemente enlazadas. Permite gestionar canciones con una interfaz inspirada en Spotify, sin depender de la consola. Proyecto enfocado en estructuras de datos y diseño de interfaces.",
+          "image": "/images/Proyecto 3.jpg",
+          "demo": "#"
+        }
+      ]
     }
   },
-
   "en": {
-    "site": { 
+    "site": {
       "title": "My Portfolio",
       "name": "Jack Anderson Limas Solarte"
     },
-
     "navbar": {
       "home": "Home",
       "projects": "Projects",
@@ -51,23 +72,47 @@
       "testimonials": "Testimonials",
       "downloadCV": "Download CV"
     },
-
     "hero": {
       "greeting": "Hello, I am",
       "name": "Jack Anderson Limas Solarte",
       "title": "I build software that solves real-world problems",
       "description": "I'm a Software Engineering student (5th semester), passionate about web development and digital solutions. Detail-oriented, constantly learning, capable of turning ideas into functional projects.",
-
       "talentsTitle": "Some of my talents",
       "talents": [
         "Logical thinking and problem-solving 💡",
         "Self-learning and discipline 📚",
         "Sincerity and humility 🤝"
       ],
-
       "profileImage": "/images/portada.jpeg",
       "ctaProjects": "View Projects",
       "ctaContact": "Contact Me"
+    },
+    "projects": {
+      "title": "My Projects",
+      "subtitle": "Some featured works",
+      "items": [
+        {
+          "id": 1,
+          "title": "Automatic Train Ticketing System",
+          "description": "Academic project designing a system for automatic train ticket management. Includes class diagrams, user stories, and software architecture. The goal was applying object-oriented design principles and development patterns.",
+          "image": "/images/Proyecto 1.webp",
+          "demo": "#"
+        },
+        {
+          "id": 2,
+          "title": "Gaming PC Configurator (Angular + TypeScript)",
+          "description": "Interactive application allowing users to configure PC gaming components. Built using Angular, TypeScript, CSS, and HTML, applying the Decorator design pattern. This project reinforces dynamic interfaces and modular architecture.",
+          "image": "/images/Proyecto 2.jpg",
+          "demo": "#"
+        },
+        {
+          "id": 3,
+          "title": "Spotify-style Playlist (TypeScript)",
+          "description": "Cross-platform application built in TypeScript with doubly linked lists. Manage songs with a Spotify-inspired interface, not console-based. Focused on data structures and UI design.",
+          "image": "/images/Proyecto 3.jpg",
+          "demo": "#"
+        }
+      ]
     }
   }
 }
