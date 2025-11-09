@@ -1,27 +1,43 @@
 "use client";
+
 import data from "@/app/data/data.json";
-import type { AppData } from "@/app/data/types";
 import { useLocale } from "@/hooks/useLocale";
-import Container from "../ui/Container";
-import Grid from "../ui/Grid";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   const { locale } = useLocale();
-  const d = (data as any)[locale] as AppData;
-
+  const { title, subtitle, items } = data[locale].projects;
   return (
-    <section id="projects" className="py-14">
-      <Container>
-        <h2 className="text-2xl font-semibold">{locale === "en" ? "My Projects" : "Mis Proyectos"}</h2>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          {locale === "en" ? "Some work and practice that reflects my learning." : "Trabajos y prácticas que reflejan mi aprendizaje."}
-        </p>
+    <section id="projects" className="px-6 md:px-16 lg:px-24 py-16">
+      {/* TITULO */}
+      <h2 className="text-3xl font-bold text-[#1E40AF]">{title}</h2>
+      <p className="text-gray-600 dark:text-gray-300 mt-1">{subtitle}</p>
 
-        <Grid className="mt-8">
-          {d.projects.map(p => <ProjectCard key={p.id} p={p} />)}
-        </Grid>
-      </Container>
+      {/* GRID — WEB */}
+      <div className="hidden md:grid grid-cols-3 gap-10 mt-10">
+        {items.map((p) => (
+          <ProjectCard
+            key={p.id}
+            title={p.title}
+            description={p.description}
+            image={p.image}
+            demo={p.demo}
+          />
+        ))}
+      </div>
+
+      {/* MOBILE — STACK */}
+      <div className="md:hidden flex flex-col items-center gap-10 mt-10">
+        {items.map((p) => (
+          <ProjectCard
+            key={p.id}
+            title={p.title}
+            description={p.description}
+            image={p.image}
+            demo={p.demo}
+          />
+        ))}
+      </div>
     </section>
   );
 }
