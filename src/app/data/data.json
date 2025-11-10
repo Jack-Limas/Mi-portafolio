@@ -71,7 +71,24 @@
      "github": "https://github.com/Jack-Limas"
    },
      "avatar": "/images/avatar.avif"
+   },
+     "about": {
+     "title": "Acerca de mí",
+     "subtitle": "Un poco sobre quién soy",
+     "description": "Soy Jack Anderson Limas Solarte, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia. Mi pasión por la tecnología comenzó desde joven, y hoy enfoco mis esfuerzos en el desarrollo web y la creación de experiencias digitales útiles y atractivas. Me encanta aprender nuevas herramientas y frameworks, además de aplicar buenas prácticas de programación y diseño de software.",
+     "skillsTitle": "Tecnologías y herramientas que manejo",
+    "skills": [
+     "Java",
+    "Python",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Spring Boot",
+    "MongoDB",
+    "Git & GitHub"
+  ]
 }
+
 
   },
   "en": {
