@@ -55,7 +55,24 @@
           "demo": "#"
         }
       ]
-    }
+    },
+    "contact": {
+     "title": "Contacto",
+     "subtitle": "Puedes escribirme para proyectos o preguntas",
+     "form": {
+     "name": "Nombre",
+     "email": "Correo",
+     "message": "Mensaje",
+     "submit": "Enviar"
+    },
+     "social": {
+     "linkedin": "https://www.linkedin.com",
+     "vercel": "https://vercel.com",
+     "github": "https://github.com/Jack-Limas"
+   },
+     "avatar": "/images/avatar.avif"
+}
+
   },
   "en": {
     "site": {
@@ -113,6 +130,23 @@
           "demo": "#"
         }
       ]
-    }
+    },
+    "contact": {
+     "title": "Contact",
+     "subtitle": "You can write to me for projects or questions",
+     "form": {
+     "name": "Name",
+     "email": "Email",
+     "message": "Message",
+     "submit": "Send"
+     },
+     "social": {
+     "linkedin": "https://www.linkedin.com",
+     "vercel": "https://vercel.com",
+     "github": "https://github.com/Jack-Limas"
+    },
+     "avatar": "/images/avatar.avif"
+   }
+
   }
 }

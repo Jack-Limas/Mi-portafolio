@@ -10,12 +10,12 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <About />
       <Projects />
-      <Offer />
+      <Contact />
+      <About />
       <Experience />
       <Testimonials />
-      <Contact />
+      <Offer />
     </>
   );
 }
