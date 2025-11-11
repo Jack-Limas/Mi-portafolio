@@ -57,65 +57,65 @@
       ]
     },
     "contact": {
-     "title": "Contacto",
-     "subtitle": "Puedes escribirme para proyectos o preguntas",
-     "form": {
-     "name": "Nombre",
-     "email": "Correo",
-     "message": "Mensaje",
-     "submit": "Enviar"
+      "title": "Contacto",
+      "subtitle": "Puedes escribirme para proyectos o preguntas",
+      "form": {
+        "name": "Nombre",
+        "email": "Correo",
+        "message": "Mensaje",
+        "submit": "Enviar"
+      },
+      "social": {
+        "linkedin": "https://www.linkedin.com",
+        "vercel": "https://vercel.com",
+        "github": "https://github.com/Jack-Limas"
+      },
+      "avatar": "/images/avatar.avif"
     },
-     "social": {
-     "linkedin": "https://www.linkedin.com",
-     "vercel": "https://vercel.com",
-     "github": "https://github.com/Jack-Limas"
-   },
-     "avatar": "/images/avatar.avif"
-  },
     "about": {
-  "title": "Acerca de mi",
-  "subtitle": "",
-  "bio": [
-    "👋 Soy Jack Limas, tengo 19 años y soy de Pasto, Colombia. Me considero alguien curioso, observador y enfocado, con la tranquilidad de alguien que sabe hacia dónde va y con un propósito claro. Valoro mucho mi entorno, desde mi familia hasta los pocos amigos leales que tengo, “la lealtad es una calle de doble sentido. Si te la pido, la tendrás de mi parte”.",
-    "En mi tiempo libre me gusta de todo un poco o simplemente disfrutar del momento. También soy alguien que mezcla lo visual con lo lógico; me gusta tanto crear como resolver, diseñar como programar.",
-    "Elegí Ingeniería de Software porque desde pequeño me intrigaba cómo la tecnología podía cambiar vidas. Hoy lo veo como una forma de crear, innovar y llevar ideas a otro nivel. Siempre tuve esa curiosidad de entender cómo funcionaban las cosas, y hoy lo veo como una forma de construir futuro, de llevar ideas a otro nivel."
-  ],
-  "avatar": "/images/imagen acerca de mi.jpeg",
-  "hobbiesTitle": "Mis Hobbies",
-  "hobbies": [
-    {
-      "id": 1,
-      "image": "/images/eladio.jpg",
-      "title": "Música",
-      "text": "El trap, rap, clásicos, entre otros; me gusta descubrir nuevos géneros y siempre tengo un playlist para cada momento. 🎵"
+      "title": "Acerca de mi",
+      "subtitle": "",
+      "bio": [
+        "👋 Soy Jack Limas, tengo 19 años y soy de Pasto, Colombia. Me considero alguien curioso, observador y enfocado, con la tranquilidad de alguien que sabe hacia dónde va y con un propósito claro. Valoro mucho mi entorno, desde mi familia hasta los pocos amigos leales que tengo, “la lealtad es una calle de doble sentido. Si te la pido, la tendrás de mi parte”.",
+        "En mi tiempo libre me gusta de todo un poco o simplemente disfrutar del momento. También soy alguien que mezcla lo visual con lo lógico; me gusta tanto crear como resolver, diseñar como programar.",
+        "Elegí Ingeniería de Software porque desde pequeño me intrigaba cómo la tecnología podía cambiar vidas. Hoy lo veo como una forma de crear, innovar y llevar ideas a otro nivel. Siempre tuve esa curiosidad de entender cómo funcionaban las cosas, y hoy lo veo como una forma de construir futuro, de llevar ideas a otro nivel."
+      ],
+      "avatar": "/images/imagen acerca de mi.jpeg",
+      "hobbiesTitle": "Mis Hobbies",
+      "hobbies": [
+        {
+          "id": 1,
+          "image": "/images/eladio.jpg",
+          "title": "Música",
+          "text": "El trap, rap, clásicos, entre otros; me gusta descubrir nuevos géneros y siempre tengo un playlist para cada momento. 🎵"
+        },
+        {
+          "id": 2,
+          "image": "/images/viajar.jpeg",
+          "title": "Viajar",
+          "text": "He recorrido varias ciudades, y cada lugar me ha dejado una historia y una nueva forma de ver la vida. 🌍"
+        },
+        {
+          "id": 3,
+          "image": "/images/futbol.jpeg",
+          "title": "Deporte",
+          "text": "No solo lo sigo, también lo juego; en la cancha encuentro disciplina, pasión y diversión. ⚽"
+        },
+        {
+          "id": 4,
+          "image": "/images/empresas.jpeg",
+          "title": "Explorar empresas",
+          "text": "Desde realidad virtual hasta fintechs como Nequi, me atrae todo lo que transforma la manera en que vivimos. 🚀"
+        },
+        {
+          "id": 5,
+          "image": "/images/Realidad virtual.jpg",
+          "title": "Experiencias VR",
+          "text": "No me caso con un solo juego; me gusta descubrir y vivir cada experiencia digital como si fuera nueva. 🎮"
+        }
+      ]
     },
-    {
-      "id": 2,
-      "image": "/images/viajar.jpeg",
-      "title": "Viajar",
-      "text": "He recorrido varias ciudades, y cada lugar me ha dejado una historia y una nueva forma de ver la vida. 🌍"
-    },
-    {
-      "id": 3,
-      "image": "/images/futbol.jpeg",
-      "title": "Deporte",
-      "text": "No solo lo sigo, también lo juego; en la cancha encuentro disciplina, pasión y diversión. ⚽"
-    },
-    {
-      "id": 4,
-      "image": "/images/empresas.jpeg",
-      "title": "Explorar empresas",
-      "text": "Desde realidad virtual hasta fintechs como Nequi, me atrae todo lo que transforma la manera en que vivimos. 🚀"
-    },
-    {
-      "id": 5,
-      "image": "/images/Realidad virtual.jpg",
-      "title": "Experiencias VR",
-      "text": "No me caso con un solo juego; me gusta descubrir y vivir cada experiencia digital como si fuera nueva. 🎮"
-    }
-  ]
-},
-  "offer": {
+    "offer": {
       "title": "Lo que ofrezco",
       "whyChoose": {
         "title": "¿Por qué elegirme?",
@@ -138,8 +138,33 @@
           "GitHub → control de versiones y trabajo colaborativo."
         ]
       }
+    },
+    "experience": {
+      "title": "Experiencia",
+      "intro": "Mi recorrido apenas empieza, pero cada paso me ha permitido aprender y crecer, tanto en lo personal como en lo profesional. Estas son algunas de las experiencias que han marcado mi camino en la ingeniería y la tecnología:",
+      "items": [
+        {
+          "title": "Proyecto de grado – Comandas digitales",
+          "description": "Actualmente estoy desarrollando un sistema de comandas digitales para restaurantes, que busca optimizar la gestión de pedidos y mejorar la experiencia del cliente. 🧾"
+        },
+        {
+          "title": "Voluntariado universitario",
+          "description": "Participé en un voluntariado en mi universidad, donde fortalecí mis habilidades de trabajo en equipo, comunicación y liderazgo, entendiendo el valor de aportar al entorno. 🤝"
+        },
+        {
+          "title": "Seminarios y conferencias",
+          "description": "He asistido a varios seminarios enfocados en tecnología y desarrollo, ampliando mi visión sobre las tendencias actuales y el impacto de la innovación en el mundo real. 🧠"
+        },
+        {
+          "title": "Scripts y proyectos académicos",
+          "description": "Durante mi carrera he desarrollado múltiples scripts, programas y diferentes páginas web, lo que me ha permitido afianzar mis bases en programación, aplicar tecnologías modernas y comprender cómo transformar la teoría en experiencias digitales funcionales y atractivas. 💻"
+        },
+        {
+          "title": "Stylish Brands – Tienda virtual de ropa urbana",
+          "description": "Creación de una marca de ropa urbana con tienda virtual, donde no solo trabajé en el diseño y la programación, sino también en la gestión de inventario, aprendiendo a integrar la parte técnica con la visión empresarial. 👕"
+        }
+      ]
     }
-
   },
   "en": {
     "site": {
@@ -199,66 +224,65 @@
       ]
     },
     "contact": {
-     "title": "Contact",
-     "subtitle": "You can write to me for projects or questions",
-     "form": {
-     "name": "Name",
-     "email": "Email",
-     "message": "Message",
-     "submit": "Send"
-     },
-     "social": {
-     "linkedin": "https://www.linkedin.com",
-     "vercel": "https://vercel.com",
-     "github": "https://github.com/Jack-Limas"
+      "title": "Contact",
+      "subtitle": "You can write to me for projects or questions",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send"
+      },
+      "social": {
+        "linkedin": "https://www.linkedin.com",
+        "vercel": "https://vercel.com",
+        "github": "https://github.com/Jack-Limas"
+      },
+      "avatar": "/images/avatar.avif"
     },
-     "avatar": "/images/avatar.avif"
-   },
-   "about": {
-  "title": "About Me",
-  "subtitle": "",
-  "bio": [
-    "👋 I'm Jack Limas, I'm 19 years old and I'm from Pasto, Colombia. I consider myself curious, observant and focused, with the calm of someone who knows where they're going and a clear purpose. I value my environment, from family to the few loyal friends I have — \"loyalty is a two-way street. If I ask it of you, you'll have it from me.\"",
-    "In my free time I like a bit of everything or just enjoying the moment. I'm also someone who mixes visual with logic; I like both creating and solving, designing and programming.",
-    "I chose Software Engineering because since I was a child I was intrigued by how technology could change lives. Today I see it as a way to create, innovate and take ideas to another level. I always had that curiosity to understand how things worked, and today I see it as a way to build a future, to bring ideas to another level."
-  ],
-  "avatar": "/images/imagen acerca de mi.jpeg",
-  "hobbiesTitle": "My Hobbies",
-  "hobbies": [
-    {
-      "id": 1,
-      "image": "/images/eladio.jpg",
-      "title": "Music",
-      "text": "Trap, rap, classics and more; I love discovering new genres and I always have a playlist for every moment. 🎵"
+    "about": {
+      "title": "About Me",
+      "subtitle": "",
+      "bio": [
+        "👋 I'm Jack Limas, I'm 19 years old and I'm from Pasto, Colombia. I consider myself curious, observant and focused, with the calm of someone who knows where they're going and a clear purpose. I value my environment, from family to the few loyal friends I have — \"loyalty is a two-way street. If I ask it of you, you'll have it from me.\"",
+        "In my free time I like a bit of everything or just enjoying the moment. I'm also someone who mixes visual with logic; I like both creating and solving, designing and programming.",
+        "I chose Software Engineering because since I was a child I was intrigued by how technology could change lives. Today I see it as a way to create, innovate and take ideas to another level. I always had that curiosity to understand how things worked, and today I see it as a way to build a future, to bring ideas to another level."
+      ],
+      "avatar": "/images/imagen acerca de mi.jpeg",
+      "hobbiesTitle": "My Hobbies",
+      "hobbies": [
+        {
+          "id": 1,
+          "image": "/images/eladio.jpg",
+          "title": "Music",
+          "text": "Trap, rap, classics and more; I love discovering new genres and I always have a playlist for every moment. 🎵"
+        },
+        {
+          "id": 2,
+          "image": "/images/viajar.jpeg",
+          "title": "Travel",
+          "text": "I've visited several cities, and each place left me a story and a new way of seeing life. 🌍"
+        },
+        {
+          "id": 3,
+          "image": "/images/futbol.jpeg",
+          "title": "Sports",
+          "text": "Not only do I follow it, I play it; on the field I find discipline, passion and fun. ⚽"
+        },
+        {
+          "id": 4,
+          "image": "/images/empresas.jpeg",
+          "title": "Exploring companies",
+          "text": "From virtual reality to fintechs like Nequi, I'm attracted to everything that transforms the way we live. 🚀"
+        },
+        {
+          "id": 5,
+          "image": "/images/Realidad virtual.jpg",
+          "title": "VR Experiences",
+          "text": "I don't stick to a single game; I enjoy discovering and living each digital experience as if it were new. 🎮"
+        }
+      ]
     },
-    {
-      "id": 2,
-      "image": "/images/viajar.jpeg",
-      "title": "Travel",
-      "text": "I've visited several cities, and each place left me a story and a new way of seeing life. 🌍"
-    },
-    {
-      "id": 3,
-      "image": "/images/futbol.jpeg",
-      "title": "Sports",
-      "text": "Not only do I follow it, I play it; on the field I find discipline, passion and fun. ⚽"
-    },
-    {
-      "id": 4,
-      "image": "/images/empresas.jpeg",
-      "title": "Exploring companies",
-      "text": "From virtual reality to fintechs like Nequi, I'm attracted to everything that transforms the way we live. 🚀"
-    },
-    {
-      "id": 5,
-      "image": "/images/Realidad virtual.jpg",
-      "title": "VR Experiences",
-      "text": "I don't stick to a single game; I enjoy discovering and living each digital experience as if it were new. 🎮"
-    }
-  ]
-  }
-   },
-   "offer": {
+    "offer": {
       "title": "What I Offer",
       "whyChoose": {
         "title": "Why Choose Me?",
@@ -281,6 +305,32 @@
           "GitHub → version control and collaborative work."
         ]
       }
+    },
+    "experience": {
+      "title": "Experience",
+      "intro": "My journey is just beginning, but each step has allowed me to learn and grow, both personally and professionally. Here are some of the experiences that have shaped my path in engineering and technology:",
+      "items": [
+        {
+          "title": "Thesis Project – Digital Orders",
+          "description": "I am currently developing a digital order system for restaurants, aimed at optimizing order management and improving the customer experience. 🧾"
+        },
+        {
+          "title": "University Volunteering",
+          "description": "I participated in a university volunteering program where I strengthened my teamwork, communication, and leadership skills, understanding the value of contributing to the community. 🤝"
+        },
+        {
+          "title": "Seminars and Conferences",
+          "description": "I have attended several seminars focused on technology and development, expanding my vision of current trends and the impact of innovation in the real world. 🧠"
+        },
+        {
+          "title": "Scripts and Academic Projects",
+          "description": "Throughout my studies, I have developed multiple scripts, programs, and web pages, allowing me to strengthen my programming foundations, apply modern technologies, and transform theory into functional and engaging digital experiences. 💻"
+        },
+        {
+          "title": "Stylish Brands – Urban Clothing E-commerce",
+          "description": "Creation of an urban clothing brand with an online store, where I worked not only on design and programming but also on inventory management, integrating technical and business perspectives. 👕"
+        }
+      ]
     }
   }
-  
+}
