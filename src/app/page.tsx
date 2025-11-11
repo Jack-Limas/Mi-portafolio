@@ -13,9 +13,9 @@ export default function Page() {
       <Projects />
       <Contact />
       <About />
+      <Offer />
       <Experience />
       <Testimonials />
-      <Offer />
     </>
   );
 }
