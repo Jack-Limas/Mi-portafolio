@@ -71,24 +71,50 @@
      "github": "https://github.com/Jack-Limas"
    },
      "avatar": "/images/avatar.avif"
-   },
-     "about": {
-     "title": "Acerca de mí",
-     "subtitle": "Un poco sobre quién soy",
-     "description": "Soy Jack Anderson Limas Solarte, estudiante de Ingeniería de Software en la Universidad Cooperativa de Colombia. Mi pasión por la tecnología comenzó desde joven, y hoy enfoco mis esfuerzos en el desarrollo web y la creación de experiencias digitales útiles y atractivas. Me encanta aprender nuevas herramientas y frameworks, además de aplicar buenas prácticas de programación y diseño de software.",
-     "skillsTitle": "Tecnologías y herramientas que manejo",
-    "skills": [
-     "Java",
-    "Python",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Spring Boot",
-    "MongoDB",
-    "Git & GitHub"
+  },
+    "about": {
+  "title": "Acerca de mi",
+  "subtitle": "",
+  "bio": [
+    "👋 Soy Jack Limas, tengo 19 años y soy de Pasto, Colombia. Me considero alguien curioso, observador y enfocado, con la tranquilidad de alguien que sabe hacia dónde va y con un propósito claro. Valoro mucho mi entorno, desde mi familia hasta los pocos amigos leales que tengo, “la lealtad es una calle de doble sentido. Si te la pido, la tendrás de mi parte”.",
+    "En mi tiempo libre me gusta de todo un poco o simplemente disfrutar del momento. También soy alguien que mezcla lo visual con lo lógico; me gusta tanto crear como resolver, diseñar como programar.",
+    "Elegí Ingeniería de Software porque desde pequeño me intrigaba cómo la tecnología podía cambiar vidas. Hoy lo veo como una forma de crear, innovar y llevar ideas a otro nivel. Siempre tuve esa curiosidad de entender cómo funcionaban las cosas, y hoy lo veo como una forma de construir futuro, de llevar ideas a otro nivel."
+  ],
+  "avatar": "/images/imagen acerca de mi.jpeg",
+  "hobbiesTitle": "Mis Hobbies",
+  "hobbies": [
+    {
+      "id": 1,
+      "image": "/images/eladio.jpg",
+      "title": "Música",
+      "text": "El trap, rap, clásicos, entre otros; me gusta descubrir nuevos géneros y siempre tengo un playlist para cada momento. 🎵"
+    },
+    {
+      "id": 2,
+      "image": "/images/viajar.jpeg",
+      "title": "Viajar",
+      "text": "He recorrido varias ciudades, y cada lugar me ha dejado una historia y una nueva forma de ver la vida. 🌍"
+    },
+    {
+      "id": 3,
+      "image": "/images/futbol.jpeg",
+      "title": "Deporte",
+      "text": "No solo lo sigo, también lo juego; en la cancha encuentro disciplina, pasión y diversión. ⚽"
+    },
+    {
+      "id": 4,
+      "image": "/images/empresas.jpeg",
+      "title": "Explorar empresas",
+      "text": "Desde realidad virtual hasta fintechs como Nequi, me atrae todo lo que transforma la manera en que vivimos. 🚀"
+    },
+    {
+      "id": 5,
+      "image": "/images/Realidad virtual.jpg",
+      "title": "Experiencias VR",
+      "text": "No me caso con un solo juego; me gusta descubrir y vivir cada experiencia digital como si fuera nueva. 🎮"
+    }
   ]
 }
-
 
   },
   "en": {
@@ -163,7 +189,51 @@
      "github": "https://github.com/Jack-Limas"
     },
      "avatar": "/images/avatar.avif"
-   }
+   },
+   "about": {
+  "title": "About Me",
+  "subtitle": "",
+  "bio": [
+    "👋 I'm Jack Limas, I'm 19 years old and I'm from Pasto, Colombia. I consider myself curious, observant and focused, with the calm of someone who knows where they're going and a clear purpose. I value my environment, from family to the few loyal friends I have — \"loyalty is a two-way street. If I ask it of you, you'll have it from me.\"",
+    "In my free time I like a bit of everything or just enjoying the moment. I'm also someone who mixes visual with logic; I like both creating and solving, designing and programming.",
+    "I chose Software Engineering because since I was a child I was intrigued by how technology could change lives. Today I see it as a way to create, innovate and take ideas to another level. I always had that curiosity to understand how things worked, and today I see it as a way to build a future, to bring ideas to another level."
+  ],
+  "avatar": "/images/imagen acerca de mi.jpeg",
+  "hobbiesTitle": "My Hobbies",
+  "hobbies": [
+    {
+      "id": 1,
+      "image": "/images/eladio.jpg",
+      "title": "Music",
+      "text": "Trap, rap, classics and more; I love discovering new genres and I always have a playlist for every moment. 🎵"
+    },
+    {
+      "id": 2,
+      "image": "/images/viajar.jpeg",
+      "title": "Travel",
+      "text": "I've visited several cities, and each place left me a story and a new way of seeing life. 🌍"
+    },
+    {
+      "id": 3,
+      "image": "/images/futbol.jpeg",
+      "title": "Sports",
+      "text": "Not only do I follow it, I play it; on the field I find discipline, passion and fun. ⚽"
+    },
+    {
+      "id": 4,
+      "image": "/images/empresas.jpeg",
+      "title": "Exploring companies",
+      "text": "From virtual reality to fintechs like Nequi, I'm attracted to everything that transforms the way we live. 🚀"
+    },
+    {
+      "id": 5,
+      "image": "/images/Realidad virtual.jpg",
+      "title": "VR Experiences",
+      "text": "I don't stick to a single game; I enjoy discovering and living each digital experience as if it were new. 🎮"
+    }
+  ]
+}
+
 
   }
 }
