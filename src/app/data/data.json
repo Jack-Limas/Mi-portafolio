@@ -114,7 +114,31 @@
       "text": "No me caso con un solo juego; me gusta descubrir y vivir cada experiencia digital como si fuera nueva. 🎮"
     }
   ]
-}
+},
+  "offer": {
+      "title": "Lo que ofrezco",
+      "whyChoose": {
+        "title": "¿Por qué elegirme?",
+        "items": [
+          "🚀 Compromiso y responsabilidad",
+          "🎨 Creatividad e innovación",
+          "🤝 Trabajo en equipo",
+          "⚡ Rapidez en la entrega"
+        ],
+        "description": "Soy un desarrollador apasionado por la tecnología y el diseño. Me destaco por mi compromiso con cada proyecto, buscando siempre soluciones prácticas, creativas y funcionales. Disfruto trabajar en equipo, adaptarme a los retos y aportar innovación en cada etapa del desarrollo. Mi objetivo es entregar resultados de calidad que superen las expectativas."
+      },
+      "skills": {
+        "title": "Tecnologías que domino",
+        "description": "Durante mi experiencia de aprendizaje y proyectos personales, he adquirido dominio en distintas herramientas y lenguajes que me permiten construir aplicaciones modernas y funcionales:",
+        "items": [
+          "HTML y CSS → para estructurar y dar estilo a interfaces web.",
+          "JavaScript y TypeScript → para crear interactividad y soluciones dinámicas.",
+          "Angular → desarrollo de aplicaciones web escalables y eficientes.",
+          "Figma → diseño de interfaces y prototipado visual.",
+          "GitHub → control de versiones y trabajo colaborativo."
+        ]
+      }
+    }
 
   },
   "en": {
@@ -232,8 +256,31 @@
       "text": "I don't stick to a single game; I enjoy discovering and living each digital experience as if it were new. 🎮"
     }
   ]
-}
-
-
   }
-}
+   },
+   "offer": {
+      "title": "What I Offer",
+      "whyChoose": {
+        "title": "Why Choose Me?",
+        "items": [
+          "🚀 Commitment and responsibility",
+          "🎨 Creativity and innovation",
+          "🤝 Teamwork",
+          "⚡ Speed in delivery"
+        ],
+        "description": "I’m a developer passionate about technology and design. I stand out for my commitment to each project, always seeking practical, creative, and functional solutions. I enjoy teamwork, adapting to challenges, and bringing innovation to every stage of development. My goal is to deliver high-quality results that exceed expectations."
+      },
+      "skills": {
+        "title": "Technologies I Master",
+        "description": "Throughout my learning journey and personal projects, I’ve gained proficiency in various tools and languages that allow me to build modern, functional applications:",
+        "items": [
+          "HTML and CSS → to structure and style web interfaces.",
+          "JavaScript and TypeScript → to create interactivity and dynamic solutions.",
+          "Angular → development of scalable and efficient web applications.",
+          "Figma → interface design and visual prototyping.",
+          "GitHub → version control and collaborative work."
+        ]
+      }
+    }
+  }
+  
