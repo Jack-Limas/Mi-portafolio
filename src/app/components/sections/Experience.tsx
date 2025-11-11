@@ -1,28 +1,68 @@
 "use client";
-import data from "@/app/data/data.json";
-import type { AppData } from "@/app/data/types";
-import { useLocale } from "@/hooks/useLocale";
-import Container from "../ui/Container";
 
-export default function Experience() {
+import React from "react";
+import data from "@/app/data/data.json";
+import { useLocale } from "@/hooks/useLocale";
+import { useThemeMode } from "@/hooks/useTheme";
+
+// Declara tipo para cada experiencia
+type ExperienceItem = {
+  title: string;
+  description: string;
+};
+
+type ExperienceData = {
+  title: string;
+  intro: string;
+  items: ExperienceItem[];
+};
+
+const Experience = () => {
   const { locale } = useLocale();
-  const d = (data as any)[locale] as AppData;
+  const { mode } = useThemeMode();
+  const experience = (data as { [key: string]: { experience: ExperienceData } })[locale].experience;
 
   return (
-    <section id="experience" className="py-14">
-      <Container>
-        <h2 className="text-2xl font-semibold">{locale === "en" ? "Experience" : "Experiencia"}</h2>
+    <section
+      id="experience"
+      className={`min-h-screen px-6 md:px-16 py-20 transition-colors duration-300 ${
+        mode === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-black"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Título principal */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0B2D7A]">
+          {experience.title}
+        </h2>
 
-        <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {d.experience.map((e, i) => (
-            <div key={i} className="rounded-2xl border p-5 dark:border-white/10">
-              <div className="text-xs text-gray-500">{e.year}</div>
-              <div className="mt-1 font-medium">{e.title}</div>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{e.desc}</p>
+        {/* Subtítulo */}
+        <p
+          className={`mb-10 text-lg ${
+            mode === "dark" ? "text-gray-300" : "text-gray-700"
+          }`}
+        >
+          {experience.intro}
+        </p>
+
+        {/* Contenedor de tarjetas responsivo */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {experience.items.map((item, index) => (
+            <div
+              key={index}
+              className={`p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ${
+                mode === "dark"
+                  ? "bg-gray-800 text-gray-200"
+                  : "bg-white text-gray-800"
+              }`}
+            >
+              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
-}
+};
+
+export default Experience;
