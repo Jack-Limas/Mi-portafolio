@@ -1,12 +1,20 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import data from "@/app/data/data.json";
 import { useLocale } from "@/hooks/useLocale";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   const { locale } = useLocale();
+
+  // Protección hydration error
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   const { title, subtitle, items } = data[locale].projects;
+
   return (
     <section id="projects" className="px-6 md:px-16 lg:px-24 py-16">
       {/* TITULO */}
