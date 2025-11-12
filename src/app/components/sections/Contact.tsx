@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { useLocale } from "@/hooks/useLocale";
@@ -12,6 +12,11 @@ export default function Contact() {
   const { locale } = useLocale();
   const { mode, setMode } = useThemeMode();
   const [status, setStatus] = useState<string>("");
+
+  // Prevención hydration error
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   const t = data[locale as "es" | "en"].contact;
 
