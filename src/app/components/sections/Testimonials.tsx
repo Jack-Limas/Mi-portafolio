@@ -1,28 +1,46 @@
 "use client";
+
+import React from "react";
 import data from "@/app/data/data.json";
-import type { AppData } from "@/app/data/types";
 import { useLocale } from "@/hooks/useLocale";
-import Container from "../ui/Container";
+import { useThemeMode } from "@/hooks/useTheme";
 import TestimonialCard from "./TestimonialCard";
 
-export default function Testimonials() {
+type Testimonial = {
+  quote: string;
+  author: string;
+  avatar: string;
+};
+
+type TestimonialsData = {
+  title: string;
+  intro: string;
+  items: Testimonial[];
+};
+
+const Testimonials = () => {
   const { locale } = useLocale();
-  const d = (data as any)[locale] as AppData;
+  const { mode } = useThemeMode();
+  const t = (data as { [key: string]: { testimonials: TestimonialsData } })[locale].testimonials;
 
   return (
-    <section id="testimonials" className="py-14">
-      <Container>
-        <h2 className="text-2xl font-semibold">{locale === "en" ? "Testimonials" : "Testimonios"}</h2>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          {locale === "en"
-            ? "Words from people I’ve worked and learned with."
-            : "Palabras de personas con quienes he trabajado y aprendido."}
-        </p>
-
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {d.testimonials.map(t => <TestimonialCard key={t.id} t={t} />)}
+    <section
+      id="testimonials"
+      className={`min-h-screen px-6 md:px-16 py-16 transition-colors duration-300 ${
+        mode === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-black"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0B2D7A]">{t.title}</h2>
+        <p className={`mb-10 text-lg text-center ${mode === "dark" ? "text-gray-300" : "text-gray-700"}`}>{t.intro}</p>
+        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
+          {t.items.map((item, idx) => (
+            <TestimonialCard key={idx} testimonial={item} mode={mode} />
+          ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
-}
+};
+
+export default Testimonials;
