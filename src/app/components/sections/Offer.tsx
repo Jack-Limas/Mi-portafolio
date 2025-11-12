@@ -24,16 +24,17 @@ export default function Offer() {
         <p className="text-lg leading-relaxed mb-6">{offer.description}</p>
 
         <ul className="space-y-3">
-          {offer.items.map((item: string, index: number) => (
-            <li
-              key={index}
-              className="flex items-center gap-3 text-base md:text-lg"
-            >
-              <span className="w-3 h-3 bg-blue-500 rounded-full" />
-              {item}
-            </li>
-          ))}
-        </ul>
+          {offer.whyChoose.items.map((item: string, index: number) => (
+          <li
+          key={index}
+          className="flex items-center gap-3 text-base md:text-lg"
+    >
+          <span className="w-3 h-3 bg-blue-500 rounded-full" />
+          {item}
+          </li>
+      ))}
+</ul>
+
       </div>
 
       {/* Imagen o ilustración */}
