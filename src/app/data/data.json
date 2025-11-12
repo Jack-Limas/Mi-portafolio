@@ -164,8 +164,42 @@
           "description": "Creación de una marca de ropa urbana con tienda virtual, donde no solo trabajé en el diseño y la programación, sino también en la gestión de inventario, aprendiendo a integrar la parte técnica con la visión empresarial. 👕"
         }
       ]
-    }
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "intro": "Estas son algunas palabras de personas con las que he trabajado y que han sido parte de mi camino en la ingeniería y la tecnología.",
+      "items": [
+        {
+          "quote": "Jack tiene un talento increíble para la programación y el diseño. En los trabajos en grupo siempre aporta soluciones rápidas y prácticas, lo que hace que todo el equipo avance más fácil",
+          "author": "Juan David Maya",
+          "avatar": "/images/testimonial1.jpg"
+        },
+        {
+          "quote": "Lo que más destaco de Jack es su dedicación. Se nota que le apasiona lo que hace y contagia esa energía al resto. Gracias a él aprendí a ver la programación de una manera más sencilla",
+          "author": "Juan Felpie Mora",
+          "avatar": "/images/testimonial2.jpg"
+        },
+        {
+          "quote": "Trabajar con Jack siempre ha sido motivador. Tiene muchas ideas creativas y siempre busca la manera de mejorar los proyectos, además de que nunca duda en ayudar cuando alguien se queda atascado",
+          "author": "Laura Martínez",
+          "avatar": "/images/testimonial3.jpg"
+        }
+  ]
+},
+    "footer": {
+      "aboutMe": "Soy un apasionado por el desarrollo de software y la innovación tecnológica. Me encanta aprender cosas nuevas y aplicarlas en mis proyectos.",
+      "email": "jacklimassolarte456@gmail.com",
+      "phone": "+57 3193379372",
+      "copyright": "© 2025 Jack Limas - Todos los derechos reservados",
+      "social": {
+        "whatsapp": "https://wa.me/573193379372",
+        "github": "https://github.com/Jack-Limas",
+        "linkedin": "https://linkedin.com/in/jack-limas",
+        "instagram": "https://instagram.com"
+  }
+}
   },
+  
   "en": {
     "site": {
       "title": "My Portfolio",
@@ -331,6 +365,40 @@
           "description": "Creation of an urban clothing brand with an online store, where I worked not only on design and programming but also on inventory management, integrating technical and business perspectives. 👕"
         }
       ]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "intro": "Here are some words from people I've worked with and who have been part of my journey in engineering and technology.",
+      "items": [
+    {
+      "quote": "Jack has incredible talent for programming and design. In group work he always brings quick, practical solutions that help the whole team move forward more easily.",
+      "author": "Juan David Maya",
+      "avatar": "/images/testimonial1.jpg"
+    },
+    {
+      "quote": "What I value most about Jack is his dedication. You can tell he is passionate about what he does, and he inspires that energy in others. Thanks to him I learned to see programming in a simpler way.",
+      "author": "Juan Felpie Mora",
+      "avatar": "/images/testimonial2.jpg"
+    },
+    {
+      "quote": "Working with Jack is always motivating. He has many creative ideas and always looks for ways to improve projects, as well as never hesitating to help when someone is stuck.",
+      "author": "Laura Martínez",
+      "avatar": "/images/testimonial3.jpg"
     }
+  ]
+},
+    "footer": {
+      "aboutMe": "I'm passionate about software development and technological innovation. I love learning new things and applying them to my projects.",
+      "email": "jacklimassolarte456@gmail.com",
+      "phone": "+57 3193379372",
+      "copyright": "© 2025 Jack Limas - All rights reserved",
+      "social": {
+        "whatsapp": "https://wa.me/573193379372",
+        "github": "https://github.com/Jack-Limas",
+        "linkedin": "https://linkedin.com/in/jack-limas",
+        "instagram": "https://instagram.com"
+      }
+    }
+
   }
 }
