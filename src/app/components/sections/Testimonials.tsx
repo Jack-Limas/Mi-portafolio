@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import data from "@/app/data/data.json";
 import { useLocale } from "@/hooks/useLocale";
 import { useThemeMode } from "@/hooks/useTheme";
@@ -21,6 +21,12 @@ type TestimonialsData = {
 const Testimonials = () => {
   const { locale } = useLocale();
   const { mode } = useThemeMode();
+
+  // Protección hydration error:
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   const t = (data as { [key: string]: { testimonials: TestimonialsData } })[locale].testimonials;
 
   return (
