@@ -1,19 +1,32 @@
-import Image from "next/image";
+type Testimonial = {
+  quote: string;
+  author: string;
+  avatar: string;
+};
 
-export default function TestimonialCard({ t }: { t: { name: string; role: string; avatar: string; text: string } }) {
-  return (
-    <article className="rounded-2xl border p-6 shadow-sm dark:border-white/10">
-      <div className="text-4xl text-gray-300">“</div>
-      <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{t.text}</p>
-      <div className="mt-6 flex items-center gap-3">
-        <div className="relative h-10 w-10 overflow-hidden rounded-full">
-          <Image src={t.avatar} alt={t.name} fill className="object-cover" />
-        </div>
-        <div>
-          <div className="text-sm font-medium">{t.name}</div>
-          <div className="text-xs text-gray-500">{t.role}</div>
-        </div>
-      </div>
-    </article>
-  );
-}
+const TestimonialCard = ({
+  testimonial,
+  mode,
+}: {
+  testimonial: Testimonial;
+  mode: string;
+}) => (
+  <div
+    className={`relative p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ${
+      mode === "dark" ? "bg-gray-800 text-gray-200" : "bg-white text-gray-800"
+    }`}
+  >
+    <div className="text-4xl leading-none mb-3 select-none">“</div>
+    <p className="mb-6 text-base">{testimonial.quote}</p>
+    <div className="flex items-center gap-3 mt-2">
+      <img
+        src={testimonial.avatar}
+        alt={testimonial.author}
+        className="w-10 h-10 rounded-full object-cover border border-gray-300"
+      />
+      <span className="font-semibold">{testimonial.author}</span>
+    </div>
+  </div>
+);
+
+export default TestimonialCard;
