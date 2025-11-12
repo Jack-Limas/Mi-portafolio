@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import data from "@/app/data/data.json";
 import { useLocale } from "@/hooks/useLocale";
@@ -8,13 +9,17 @@ export default function Hero() {
   const { locale } = useLocale();
   const t = data[locale].hero;
 
+  // Prevención hydration mismatch
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return (
     <section
       id="home"
       className="pt-32 pb-20 bg-gray-100 dark:bg-[#0B1220] text-black dark:text-white"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-6">
-
         {/* --- TEXT LEFT --- */}
         <div>
           <h2 className="text-2xl font-bold mb-1">Hola, soy {t.name}</h2>
@@ -66,7 +71,6 @@ export default function Hero() {
             />
           </div>
         </div>
-
       </div>
     </section>
   );
