@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import data from "@/app/data/data.json";
 import { useLocale } from "@/hooks/useLocale";
@@ -9,6 +9,12 @@ import { useThemeMode } from "@/hooks/useTheme";
 export default function Offer() {
   const { locale } = useLocale();
   const { mode } = useThemeMode();
+
+  // Protección hydration error:
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   const offer = (data as any)[locale].offer;
 
   return (
@@ -25,18 +31,16 @@ export default function Offer() {
 
         <ul className="space-y-3">
           {offer.whyChoose.items.map((item: string, index: number) => (
-          <li
-          key={index}
-          className="flex items-center gap-3 text-base md:text-lg"
-    >
-          <span className="w-3 h-3 bg-blue-500 rounded-full" />
-          {item}
-          </li>
-      ))}
-</ul>
-
+            <li
+              key={index}
+              className="flex items-center gap-3 text-base md:text-lg"
+            >
+              <span className="w-3 h-3 bg-blue-500 rounded-full" />
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
-
-          </section>
+    </section>
   );
 }
