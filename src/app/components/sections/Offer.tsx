@@ -37,16 +37,6 @@ export default function Offer() {
 
       </div>
 
-      {/* Imagen o ilustración */}
-      <div className="md:w-1/2 flex justify-center">
-        <Image
-          src={offer.image}
-          alt="Offer section image"
-          width={400}
-          height={400}
-          className="rounded-2xl shadow-lg object-cover"
-        />
-      </div>
-    </section>
+          </section>
   );
 }
