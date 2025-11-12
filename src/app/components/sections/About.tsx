@@ -1,4 +1,3 @@
-// src/app/components/sections/About.tsx
 "use client";
 
 import React from "react";
@@ -7,23 +6,33 @@ import data from "@/app/data/data.json";
 import { useLocale } from "@/hooks/useLocale";
 import { useThemeMode } from "@/hooks/useTheme";
 
-
 export default function AboutSection() {
-  const { locale } = useLocale(); // debe devolver 'es' | 'en'
+  const { locale } = useLocale();
   const { mode } = useThemeMode();
-  // 'light'|'dark'|'system' (usamos para clases)
+
+  // Prevención hydration error:
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   const about = (data as any)[locale].about;
 
   return (
     <section
       id="about"
-      className={`py-8 md:py-16 transition-colors ${mode === "dark" ? "bg-slate-900 text-slate-100" : "bg-gray-50 text-slate-900"}`}
+      className={`py-8 md:py-16 transition-colors ${
+        mode === "dark"
+          ? "bg-slate-900 text-slate-100"
+          : "bg-gray-50 text-slate-900"
+      }`}
     >
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         {/* Blue header bar like Figma */}
         <div className="mb-6">
           <div className="bg-[#1E40AF] text-white rounded-sm px-4 py-3 md:py-4">
-            <h2 className="text-xl md:text-2xl font-extrabold"> {about.title} </h2>
+            <h2 className="text-xl md:text-2xl font-extrabold">
+              {about.title}
+            </h2>
           </div>
         </div>
 
@@ -58,7 +67,9 @@ export default function AboutSection() {
 
         {/* Hobbies grid */}
         <div>
-          <h4 className="text-lg md:text-xl font-semibold mb-4">{about.hobbiesTitle}</h4>
+          <h4 className="text-lg md:text-xl font-semibold mb-4">
+            {about.hobbiesTitle}
+          </h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {about.hobbies.map((h: any) => (
               <article
