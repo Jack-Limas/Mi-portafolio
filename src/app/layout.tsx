@@ -11,7 +11,25 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-white text-black antialiased dark:bg-[#0B1220] dark:text-white">
+      <head>
+        {/* Este script asegura dark/light perfecto desde el primer render */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem("theme") || "system";
+                  var mql = window.matchMedia("(prefers-color-scheme: dark)");
+                  var isDark = theme === "dark" || (theme === "system" && mql.matches);
+                  document.documentElement.classList.toggle("dark", isDark);
+                  document.documentElement.setAttribute("data-theme", theme);
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="antialiased">
         <LocaleProvider>
           <AppShell>{children}</AppShell>
         </LocaleProvider>
