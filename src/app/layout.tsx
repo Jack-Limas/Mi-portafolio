@@ -12,7 +12,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Este script asegura dark/light perfecto desde el primer render */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
