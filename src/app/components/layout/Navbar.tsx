@@ -5,10 +5,9 @@ import { useLocale } from "@/hooks/useLocale";
 
 export default function Navbar() {
   const { mode, setMode } = useThemeMode();
-  const { locale, toggle, t } = useLocale(); // <-- t contiene los textos traducidos
+  const { locale, toggle, t } = useLocale();
   const [open, setOpen] = useState(false);
 
-  // Manejo dinámico de clases para modo oscuro/claro
   const navBg = mode === "dark" ? "bg-[#13204c]" : "bg-[#1E40AF]";
   const navText = mode === "dark" ? "text-gray-100" : "text-white";
   const navBtn = mode === "dark" ? "bg-gray-100 text-[#1E40AF]" : "bg-white text-[#1E40AF]";
@@ -16,7 +15,6 @@ export default function Navbar() {
   return (
     <nav className={`w-full ${navBg} ${navText} shadow-md sticky top-0 left-0 z-50`}>
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-        {/* LOGO */}
         <h1 className="text-2xl font-bold">{t.site.title}</h1>
 
         {/* Desktop MENU */}
