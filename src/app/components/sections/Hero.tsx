@@ -23,25 +23,20 @@ export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [realMode, setRealMode] = useState<"light" | "dark">(getEffectiveMode(mode));
 
-  // Cambia el valor real cuando cambia el contexto o el SO
   useEffect(() => {
     function updateRealMode() {
       setRealMode(getEffectiveMode(mode));
     }
     updateRealMode();
     if (mode === "system") {
-      // Escuchar cambios de SO en tiempo real
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
       mq.addEventListener("change", updateRealMode);
       return () => mq.removeEventListener("change", updateRealMode);
     }
   }, [mode]);
-
-  // Para evitar hydration error
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  // Clases dependientes de realMode
   const sectionBg =
     realMode === "dark"
       ? "bg-[#16213E] text-white"
@@ -69,17 +64,25 @@ export default function Hero() {
         <div className="flex gap-4 mt-2">
           <a
             href="#projects"
-            className="px-5 py-2 rounded-lg font-semibold shadow bg-blue-700 text-white hover:bg-blue-900"
+            className={`
+              px-5 py-2 rounded-lg font-semibold shadow
+              transition-all duration-200
+              ${realMode === "dark"
+                ? "bg-[#222738] text-white hover:shadow-[0_0_32px_0_rgba(30,64,175,0.85)] hover:bg-[#1E40AF]"
+                : "bg-blue-700 text-white hover:bg-blue-800 shadow-lg"}
+            `}
           >
             {t.hero.ctaProjects}
           </a>
           <a
             href="#contact"
-            className={`px-5 py-2 rounded-lg font-semibold shadow ${
-              realMode === "dark"
-                ? "bg-gray-700 text-blue-200 hover:bg-gray-900"
-                : "bg-gray-200 text-[#1E40AF] hover:bg-blue-100"
-            }`}
+            className={`
+              px-5 py-2 rounded-lg font-semibold shadow
+              transition-all duration-200
+              ${realMode === "dark"
+                ? "bg-[#222738] text-blue-200 hover:shadow-[0_0_32px_0_rgba(30,64,175,0.85)] hover:bg-[#1E40AF]"
+                : "bg-gray-200 text-[#1E40AF] hover:bg-blue-100 shadow-lg"}
+            `}
           >
             {t.hero.ctaContact}
           </a>
@@ -87,7 +90,15 @@ export default function Hero() {
       </div>
       {/* --- Columna derecha: Imagen --- */}
       <div className="flex justify-center md:justify-start md:pl-20 items-center px-8 mt-20 md:mt-0">
-        <div className="rounded-full overflow-hidden border-4 border-blue-700 bg-white w-72 h-72 md:w-[28rem] md:h-[28rem] flex items-center justify-center">
+        <div
+          className={`
+            rounded-full overflow-hidden w-72 h-72 md:w-[28rem] md:h-[28rem]
+            flex items-center justify-center transition-all duration-200 bg-white
+            ${realMode === "dark"
+              ? "shadow-[0_0_32px_0_rgba(30,64,175,0.75)] border-4 border-[#23283a]"
+              : "shadow-lg border-4 border-gray-200"}
+          `}
+        >
           <Image
             src={t.hero.profileImage}
             alt="profile"
