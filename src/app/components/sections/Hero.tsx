@@ -86,7 +86,7 @@ export default function Hero() {
         </div>
       </div>
       {/* --- Columna derecha: Imagen --- */}
-      <div className="flex justify-center md:justify-start md:pl-20 items-center px-8">
+      <div className="flex justify-center md:justify-start md:pl-20 items-center px-8 mt-20 md:mt-0">
         <div className="rounded-full overflow-hidden border-4 border-blue-700 bg-white w-72 h-72 md:w-[28rem] md:h-[28rem] flex items-center justify-center">
           <Image
             src={t.hero.profileImage}
