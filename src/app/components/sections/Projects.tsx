@@ -5,7 +5,6 @@ import { useLocale } from "@/hooks/useLocale";
 import { useThemeMode, ThemeMode } from "@/hooks/useTheme";
 import ProjectCard from "./ProjectCard";
 
-// Función igual que antes para modo efectivo
 function getEffectiveMode(mode: ThemeMode): "light" | "dark" {
   if (mode === "system" && typeof window !== "undefined") {
     return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -20,9 +19,7 @@ export default function Projects() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    function updateRealMode() {
-      setRealMode(getEffectiveMode(mode));
-    }
+    function updateRealMode() { setRealMode(getEffectiveMode(mode)); }
     updateRealMode();
     if (mode === "system") {
       const mq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -35,20 +32,23 @@ export default function Projects() {
 
   const { title, subtitle, items } = data[locale].projects;
 
-  // Clases de fondo/texto para el modo real
+  // Fondo general
   const sectionBg =
     realMode === "dark"
       ? "bg-[#1B2337] text-white"
-      : "bg-gray-50 text-slate-900";
+      : "bg-gray-50 text-black";
+
+  // Título y subtítulo
+  const titleClass = "text-3xl font-extrabold mb-1 " + (realMode === "dark" ? "text-white" : "text-black");
+  const subtitleClass = (realMode === "dark" ? "text-gray-300" : "text-gray-700") + " mb-2";
 
   return (
     <section id="projects" className={`px-6 md:px-16 lg:px-24 py-16 ${sectionBg} transition-colors duration-300`}>
-      {/* TITULO CENTRADO */}
+      {/* TITULO Y SUBTÍTULO CENTRADOS */}
       <div className="text-center mb-2">
-        <h2 className="text-3xl font-extrabold text-[#1E40AF] mb-1">{title}</h2>
-        <p className={realMode === "dark" ? "text-gray-300" : "text-gray-600"}>{subtitle}</p>
+        <h2 className={titleClass}>{title}</h2>
+        <p className={subtitleClass}>{subtitle}</p>
       </div>
-
       {/* GRID — WEB */}
       <div className="hidden md:grid grid-cols-3 gap-10 mt-10">
         {items.map((p) => (
@@ -62,7 +62,6 @@ export default function Projects() {
           />
         ))}
       </div>
-
       {/* MOBILE — STACK */}
       <div className="md:hidden flex flex-col items-center gap-10 mt-10">
         {items.map((p) => (
