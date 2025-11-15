@@ -1,7 +1,6 @@
-import type { NextConfig } from "next";
-import path from "path";
+const path = require("path");
 
-const nextConfig: NextConfig = {
+module.exports = {
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -15,7 +14,9 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true
-  }
-};
+  },
+  experimental: {
+  turbo: false
+}
 
-export default nextConfig;
+};

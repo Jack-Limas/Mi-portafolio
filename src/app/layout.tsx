@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import AppShell from "./components/layout/AppShell";
-import { LocaleProvider } from "@/hooks/useLocale";
 
 export const metadata: Metadata = {
   title: "Jack Limas",
@@ -12,6 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Si necesitas scripts globales, ponlos aquí */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -29,9 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
-        <LocaleProvider>
-          <AppShell>{children}</AppShell>
-        </LocaleProvider>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
