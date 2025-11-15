@@ -11,12 +11,12 @@ export default function Navbar() {
   const navText = "text-white dark:text-gray-100";
   const navBtn = "bg-white text-[#1E40AF] dark:bg-gray-100 dark:text-[#1E40AF]";
 
-  return (
+  return (  
     <nav className={`w-full ${navBg} ${navText} shadow-md sticky top-0 left-0 z-50`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-3 py-4">
         {/* LOGO */}
         <h1 className="text-2xl font-bold tracking-tight whitespace-nowrap flex-shrink-0">
-          Mi Portafolio
+          {t.site.title}
         </h1>
         {/* DESKTOP MENU */}
         <ul className="hidden lg:flex flex-1 gap-7 text-base font-semibold tracking-wide ml-7">

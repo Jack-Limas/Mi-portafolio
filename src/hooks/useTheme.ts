@@ -11,7 +11,7 @@ function applyTheme(mode: ThemeMode) {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const isDark = mode === "dark" || (mode === "system" && prefersDark);
   root.classList.toggle("dark", isDark);
-  root.setAttribute("data-theme", mode);
+  root.setAttribute("data-theme", mode); // opcional: si usas data-theme para algún css
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -21,18 +21,28 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   );
 
   useEffect(() => {
-    applyTheme(mode);
+    function updateTheme() {
+      // Toma último valor (importante si hay cambio de system)
+      const stored = localStorage.getItem("theme") as ThemeMode | null;
+      let effectiveMode = mode;
+      if (stored === "system" || (!stored && mode === "system")) {
+        const q = window.matchMedia("(prefers-color-scheme: dark)");
+        effectiveMode = q.matches ? "dark" : "light";
+      }
+      applyTheme(effectiveMode);
+    }
+    updateTheme();
     localStorage.setItem("theme", mode);
-  }, [mode]);
 
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => {
-      if (localStorage.getItem("theme") === "system") applyTheme("system");
+    let mq: MediaQueryList | null = null;
+    if (mode === "system") {
+      mq = window.matchMedia("(prefers-color-scheme: dark)");
+      mq.addEventListener("change", updateTheme);
+    }
+    return () => {
+      mq?.removeEventListener("change", updateTheme);
     };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
+  }, [mode]);
 
   const value = useMemo(() => ({ mode, setMode }), [mode]);
   return React.createElement(ThemeCtx.Provider, { value }, children);
