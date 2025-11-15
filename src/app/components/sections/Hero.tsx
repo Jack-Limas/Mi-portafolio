@@ -5,18 +5,19 @@ import { useLocale } from "@/hooks/useLocale";
 import { useThemeMode } from "@/hooks/useTheme";
 
 export default function Hero() {
-  const { t } = useLocale();               // <-- ahora t.hero tiene todos los textos
+  const { t } = useLocale();
   const { mode } = useThemeMode();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  // Estilo dinámico según el modo
+  // Fondo igual a la sección de proyectos
   const sectionBg =
-    mode === "dark" ? "bg-[#13204c] text-gray-100" : "bg-gray-100 text-gray-900";
-  const titleText = mode === "dark" ? "text-gray-100" : "text-blue-800";
-  const descText = mode === "dark" ? "text-gray-300" : "text-gray-700";
-  const talentsText = mode === "dark" ? "text-gray-200" : "text-gray-900";
+    mode === "dark"
+      ? "bg-[#16213E]"
+      : "bg-gray-100";
+
+  // Botón principal y secundario igual que proyectos/navbar
   const btnPrimary =
     mode === "dark"
       ? "bg-blue-700 text-white hover:bg-blue-900"
@@ -24,7 +25,7 @@ export default function Hero() {
   const btnSecondary =
     mode === "dark"
       ? "bg-gray-700 text-blue-200 hover:bg-gray-900"
-      : "bg-gray-200 text-blue-700 hover:bg-blue-100";
+      : "bg-gray-200 text-[#1E40AF] hover:bg-blue-100";
 
   return (
     <section
@@ -33,14 +34,15 @@ export default function Hero() {
     >
       {/* --- Columna izquierda: Texto --- */}
       <div className="flex flex-col justify-center px-8">
-        <h2 className={`text-4xl font-bold mb-3 ${titleText}`}>
-          
+        <h2 className="text-4xl font-bold text-black dark:text-white mb-3">
           {t.hero.greeting} <span className="font-black">{t.hero.name}</span>
         </h2>
-        <p className={`text-xl mb-2 ${descText}`}>{t.hero.title}</p>
-        <p className={`text-base mb-6 leading-relaxed ${descText}`}>{t.hero.description}</p>
-        <h3 className={`text-lg font-semibold mb-2 ${titleText}`}>{t.hero.talentsTitle}</h3>
-        <ul className={`space-y-2 mb-6 ${talentsText}`}>
+        <p className="text-xl text-gray-700 dark:text-gray-300 mb-2">{t.hero.title}</p>
+        <p className="text-base text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+          {t.hero.description}
+        </p>
+        <h3 className="text-lg font-bold text-black dark:text-white mb-2">{t.hero.talentsTitle}</h3>
+        <ul className="space-y-2 mb-6 text-gray-700 dark:text-gray-300">
           {t.hero.talents.map((talent: string, idx: number) => (
             <li key={idx}>{talent}</li>
           ))}
@@ -62,7 +64,6 @@ export default function Hero() {
       </div>
       {/* --- Columna derecha: Imagen --- */}
       <div className="flex justify-center md:justify-start md:pl-20 items-center px-8">
-        {/* ¡Oval más grande y desplazado a la izquierda! */}
         <div className="rounded-full overflow-hidden border-4 border-blue-700 bg-white w-72 h-72 md:w-[28rem] md:h-[28rem] flex items-center justify-center">
           <Image
             src={t.hero.profileImage}
