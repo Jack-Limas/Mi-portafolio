@@ -45,7 +45,7 @@
           "title": "Configurador de PC Gaming (Angular + TypeScript)",
           "description": "Desarrollo de una aplicación interactiva que permite al usuario configurar los componentes de un PC gamer. Utiliza Angular, TypeScript, CSS y HTML, aplicando el patrón de diseño Decorator. Este proyecto refuerza la práctica en interfaces dinámicas y arquitectura modular.",
           "image": "/images/Proyecto 2.jpg",
-          "demo": "#"
+          "demo": "https://proyecto-vercel-1.vercel.app/"
         },
         {
           "id": 3,

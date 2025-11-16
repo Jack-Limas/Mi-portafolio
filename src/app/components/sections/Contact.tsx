@@ -119,21 +119,17 @@ export default function Contact() {
           </button>
           {status && <p className="text-sm text-green-600 dark:text-green-400 mt-2">{status}</p>}
 
-          {/* LINKS Y LOGOS */}
-          <div className="flex justify-center gap-6 mt-6">
-            {/* PON TU LINK DE LINKEDIN AQUÍ */}
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src="/images/linkedin.png" alt="LinkedIn" width={72} height={72} />
-            </a>
-            {/* PON TU LINK DE VERCEL AQUÍ */}
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src="/images/vercel.svg" alt="Vercel" width={72} height={72} />
-            </a>
-            {/* PON TU LINK DE GITHUB AQUÍ */}
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src="/images/github.png" alt="GitHub" width={72} height={72} />
-            </a>
-          </div>
+        <div className="flex justify-center gap-6 mt-6">
+          <a href={t.social.linkedin} target="_blank" rel="noopener noreferrer">
+          <Image src="/images/linkedin.png" alt="LinkedIn" width={32} height={32} />
+          </a>
+          <a href={t.social.vercel} target="_blank" rel="noopener noreferrer">
+          <Image src="/images/vercel.svg" alt="Vercel" width={32} height={32} />
+          </a>
+          <a href={t.social.github} target="_blank" rel="noopener noreferrer">
+          <Image src="/images/github.png" alt="GitHub" width={32} height={32} />
+          </a>
+        </div>
         </form>
 
         {/* Avatar GRANDE con efecto */}
