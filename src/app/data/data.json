@@ -187,6 +187,7 @@
   ]
 },
     "footer": {
+      "aboutTitle": "Sobre mí",
       "aboutMe": "Soy un apasionado por el desarrollo de software y la innovación tecnológica. Me encanta aprender cosas nuevas y aplicarlas en mis proyectos.",
       "email": "jacklimassolarte456@gmail.com",
       "phone": "+57 3193379372",
@@ -281,7 +282,7 @@
         "In my free time I like a bit of everything or just enjoying the moment. I'm also someone who mixes visual with logic; I like both creating and solving, designing and programming.",
         "I chose Software Engineering because since I was a child I was intrigued by how technology could change lives. Today I see it as a way to create, innovate and take ideas to another level. I always had that curiosity to understand how things worked, and today I see it as a way to build a future, to bring ideas to another level."
       ],
-      "avatar": "/images/imagen acerca de mi.jpeg",
+      "avatar": "/images/acerca de mi.jpeg",
       "hobbiesTitle": "My Hobbies",
       "hobbies": [
         {
@@ -388,6 +389,7 @@
   ]
 },
     "footer": {
+      "aboutTitle": "About me",
       "aboutMe": "I'm passionate about software development and technological innovation. I love learning new things and applying them to my projects.",
       "email": "jacklimassolarte456@gmail.com",
       "phone": "+57 3193379372",
