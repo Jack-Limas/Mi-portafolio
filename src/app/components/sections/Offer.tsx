@@ -42,9 +42,11 @@ export default function OfferSection() {
     realMode === "dark"
       ? "text-white"
       : "text-black";
-
   return (
-    <section className={`min-h-screen px-4 md:px-16 py-10 transition-colors duration-300 ${realMode === "dark" ? "bg-[#1b2337] text-white" : "bg-gray-50 text-blue-900"}`}>
+      <section 
+          id="offer"
+          className={`scroll-mt-24 min-h-screen px-4 md:px-16 py-10 transition-colors duration-300 ${realMode === "dark" ? "bg-[#1b2337] text-white" : "bg-gray-50 text-blue-900"}`}
+>
       <h2 className={`text-2xl md:text-3xl font-bold text-center mb-10 ${realMode === "dark" ? "text-white" : "text-black"}`}>
         {offer.title}
       </h2>

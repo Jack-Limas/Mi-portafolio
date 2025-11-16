@@ -48,7 +48,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className={`py-8 md:py-16 transition-colors ${sectionBg}`}
+      className={`py-16 md:py-18 transition-colors ${sectionBg}`}
     >
       <div className="w-full max-w-screen-2xl xl:px-10 md:px-8 px-4 mx-auto">
         {/* Titulo centrado */}
