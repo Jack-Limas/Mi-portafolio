@@ -41,7 +41,7 @@ export default function OfferSection() {
   const cardText =
     realMode === "dark"
       ? "text-white"
-      : "text-blue-900";
+      : "text-black";
 
   return (
     <section className={`min-h-screen px-4 md:px-16 py-10 transition-colors duration-300 ${realMode === "dark" ? "bg-[#1b2337] text-white" : "bg-gray-50 text-blue-900"}`}>
