@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* BOTONES DESKTOP */}
         <div className="hidden lg:flex items-center gap-6 ml-8">
           <a
-            href="/cv.pdf"
+            href="/docs/Jack_Limas_CV_2025.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={`${navBtn} px-8 py-2 rounded font-bold text-xs transition whitespace-nowrap`}

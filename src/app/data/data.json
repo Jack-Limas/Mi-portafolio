@@ -25,7 +25,7 @@
         "Aprendizaje autónomo y disciplina 📚",
         "Sinceridad y humildad 🤝"
       ],
-      "profileImage": "/images/portada.jpeg",
+      "profileImage": "/images/de frente.jpeg",
       "ctaProjects": "Ver Proyectos",
       "ctaContact": "Contáctame"
     },
@@ -70,7 +70,7 @@
         "vercel": "https://vercel.com",
         "github": "https://github.com/Jack-Limas"
       },
-      "avatar": "/images/avatar.avif"
+      "avatar": "/images/portada.jpeg"
     },
     "about": {
       "title": "Acerca de mi",
@@ -227,7 +227,7 @@
         "Self-learning and discipline 📚",
         "Sincerity and humility 🤝"
       ],
-      "profileImage": "/images/portada.jpeg",
+      "profileImage": "/images/de frente.jpeg",
       "ctaProjects": "View Projects",
       "ctaContact": "Contact Me"
     },
@@ -272,7 +272,7 @@
         "vercel": "https://vercel.com",
         "github": "https://github.com/Jack-Limas"
       },
-      "avatar": "/images/avatar.avif"
+      "avatar": "/images/portada.jpeg"
     },
     "about": {
       "title": "About Me",
