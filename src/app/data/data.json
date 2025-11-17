@@ -37,22 +37,22 @@
           "id": 1,
           "title": "Sistema automático de expedición de billetes de tren",
           "description": "Proyecto académico en el que diseñé un sistema para la gestión automática de boletos de tren. Incluye diagramas de clases, historias de usuario y el planteamiento de la arquitectura de software. El objetivo fue aplicar principios de diseño orientado a objetos y patrones de desarrollo.",
-          "image": "/images/Proyecto 1.webp",
-          "demo": "#"
+          "image": "/images/netflix.png",
+          "demo": "https://jack-limas-responsive.vercel.app/"
         },
         {
           "id": 2,
           "title": "Configurador de PC Gaming (Angular + TypeScript)",
           "description": "Desarrollo de una aplicación interactiva que permite al usuario configurar los componentes de un PC gamer. Utiliza Angular, TypeScript, CSS y HTML, aplicando el patrón de diseño Decorator. Este proyecto refuerza la práctica en interfaces dinámicas y arquitectura modular.",
-          "image": "/images/Proyecto 2.jpg",
-          "demo": "https://proyecto-vercel-1.vercel.app/"
+          "image": "/images/boleto.png",
+          "demo": "https://jack-limas-maquetacion.vercel.app/"
         },
         {
           "id": 3,
           "title": "Lista de reproducción estilo Spotify (TypeScript)",
           "description": "Aplicación de escritorio/web desarrollada en TypeScript con listas doblemente enlazadas. Permite gestionar canciones con una interfaz inspirada en Spotify, sin depender de la consola. Proyecto enfocado en estructuras de datos y diseño de interfaces.",
-          "image": "/images/Proyecto 3.jpg",
-          "demo": "#"
+          "image": "/images/imagen de ejemplo.png",
+          "demo": "https://example-portfolio-iota.vercel.app/es"
         }
       ]
     },
