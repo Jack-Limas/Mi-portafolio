@@ -239,22 +239,22 @@
           "id": 1,
           "title": "Automatic Train Ticketing System",
           "description": "Academic project designing a system for automatic train ticket management. Includes class diagrams, user stories, and software architecture. The goal was applying object-oriented design principles and development patterns.",
-          "image": "/images/Proyecto 1.webp",
-          "demo": "#"
+          "image": "/images/netflix.png",
+          "demo": "https://jack-limas-responsive.vercel.app/"
         },
         {
           "id": 2,
           "title": "Gaming PC Configurator (Angular + TypeScript)",
           "description": "Interactive application allowing users to configure PC gaming components. Built using Angular, TypeScript, CSS, and HTML, applying the Decorator design pattern. This project reinforces dynamic interfaces and modular architecture.",
-          "image": "/images/Proyecto 2.jpg",
-          "demo": "#"
+          "image": "/images/boleto.png",
+          "demo": "https://jack-limas-maquetacion.vercel.app/"
         },
         {
           "id": 3,
           "title": "Spotify-style Playlist (TypeScript)",
           "description": "Cross-platform application built in TypeScript with doubly linked lists. Manage songs with a Spotify-inspired interface, not console-based. Focused on data structures and UI design.",
-          "image": "/images/Proyecto 3.jpg",
-          "demo": "#"
+          "image": "/images/imagen de ejemplo.png",
+          "demo": "https://example-portfolio-iota.vercel.app/es"
         }
       ]
     },
