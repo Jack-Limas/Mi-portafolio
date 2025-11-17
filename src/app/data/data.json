@@ -35,22 +35,22 @@
       "items": [
         {
           "id": 1,
-          "title": "Sistema automático de expedición de billetes de tren",
-          "description": "Proyecto académico en el que diseñé un sistema para la gestión automática de boletos de tren. Incluye diagramas de clases, historias de usuario y el planteamiento de la arquitectura de software. El objetivo fue aplicar principios de diseño orientado a objetos y patrones de desarrollo.",
+          "title": "Netflix Clone - Plataforma de Streaming",
+          "description": "Réplica de la interfaz de Netflix desarrollada con Next.js y Tailwind CSS que reproduce fielmente la experiencia de usuario de la plataforma original. Incluye sistema de navegación lateral con menú expandible (Browse, Watchlist, Coming soon, Friends, Parties, Settings), banner principal con información de serie destacada (título, género, temporadas, rating, botones de acción), carrusel horizontal de contenido multimedia con categorías (Continue watching, Horror marathon, Sci-fi binge, etc.), sistema de 'parties' para visualización colaborativa con avatares de usuarios, barra de búsqueda funcional y perfiles de usuario en el header. El proyecto implementa componentes reutilizables avanzados, estado global para gestión de usuario, grid system responsivo y transiciones suaves. ",
           "image": "/images/netflix.png",
           "demo": "https://jack-limas-responsive.vercel.app/"
         },
         {
           "id": 2,
-          "title": "Configurador de PC Gaming (Angular + TypeScript)",
-          "description": "Desarrollo de una aplicación interactiva que permite al usuario configurar los componentes de un PC gamer. Utiliza Angular, TypeScript, CSS y HTML, aplicando el patrón de diseño Decorator. Este proyecto refuerza la práctica en interfaces dinámicas y arquitectura modular.",
+          "title": "Tarjeta de embarque digital - Diseño UI/UX",
+          "description": "Tarjeta de embarque digital desarrollada con Next.js y Tailwind CSS que simula un pase de abordar real de aerolínea. Incluye código QR, información detallada del vuelo (origen, destino, fechas, horarios), datos del pasajero (nombre, asiento, terminal, puerta de embarque) y diseño responsive optimizado para mobile y desktop. El proyecto destaca por su fidelidad visual a las interfaces de aerolíneas modernas. Implementa componentes reutilizables de React y layout modular, ideal para demostrar habilidades en diseño de interfaces complejas y atención al detalle.",
           "image": "/images/boleto.png",
           "demo": "https://jack-limas-maquetacion.vercel.app/"
         },
         {
           "id": 3,
-          "title": "Lista de reproducción estilo Spotify (TypeScript)",
-          "description": "Aplicación de escritorio/web desarrollada en TypeScript con listas doblemente enlazadas. Permite gestionar canciones con una interfaz inspirada en Spotify, sin depender de la consola. Proyecto enfocado en estructuras de datos y diseño de interfaces.",
+          "title": "Portfolio Profesional - Diseño Web Moderno",
+          "description": "Sitio web de portafolio profesional desarrollado con Next.js, React y Tailwind CSS que presenta un diseño limpio y moderno con sidebar lateral informativo. Incluye secciones organizadas de experiencia laboral con bullets detallados, formación académica con timeline visual, habilidades técnicas categorizadas (lenguajes de programación, frameworks, herramientas), y sección de hobbies/intereses personales. El diseño implementa modo oscuro completo, es totalmente responsive para todos los dispositivos y está optimizado para impresión en PDF. Utiliza componentes modulares de React, sistema de grid avanzado con Tailwind CSS y estructura de datos JSON para fácil mantenimiento.",
           "image": "/images/imagen de ejemplo.png",
           "demo": "https://example-portfolio-iota.vercel.app/es"
         }
@@ -109,7 +109,7 @@
         },
         {
           "id": 5,
-          "image": "/images/Realidad virtual.jpg",
+          "image": "/images/RV ultimate.jpg",
           "title": "Experiencias VR",
           "text": "No me caso con un solo juego; me gusta descubrir y vivir cada experiencia digital como si fuera nueva. 🎮"
         }
@@ -237,22 +237,22 @@
       "items": [
         {
           "id": 1,
-          "title": "Automatic Train Ticketing System",
-          "description": "Academic project designing a system for automatic train ticket management. Includes class diagrams, user stories, and software architecture. The goal was applying object-oriented design principles and development patterns.",
+          "title": "Netflix Clone - Streaming Platform",
+          "description": "replica of Netflix's interface developed with Next.js and Tailwind CSS that faithfully reproduces the original platform's user experience. Features expandable sidebar navigation system (Browse, Watchlist, Coming soon, Friends, Parties, Settings), main banner with featured series information (title, genre, seasons, rating, action buttons), horizontal carousel of multimedia content with categories (Continue watching, Horror marathon, Sci-fi binge, etc.), 'parties' system for collaborative viewing with user avatars, functional search bar and user profiles in header. The project implements advanced reusable components, global state for user management, responsive grid system and smooth transitions.",
           "image": "/images/netflix.png",
           "demo": "https://jack-limas-responsive.vercel.app/"
         },
         {
           "id": 2,
-          "title": "Gaming PC Configurator (Angular + TypeScript)",
-          "description": "Interactive application allowing users to configure PC gaming components. Built using Angular, TypeScript, CSS, and HTML, applying the Decorator design pattern. This project reinforces dynamic interfaces and modular architecture.",
+          "title": "Digital Boarding Pass - UI/UX Design",
+          "description": "Digital boarding pass developed with Next.js and Tailwind CSS that simulates a real airline boarding pass. Features QR code, detailed flight information (origin, destination, dates, times), passenger data (name, seat, terminal, gate) and responsive design optimized for mobile and desktop. The project stands out for its visual fidelity to modern airline interfaces. Implements reusable React components and modular layout, ideal for demonstrating skills in complex interface design and attention to detail.",
           "image": "/images/boleto.png",
           "demo": "https://jack-limas-maquetacion.vercel.app/"
         },
         {
           "id": 3,
-          "title": "Spotify-style Playlist (TypeScript)",
-          "description": "Cross-platform application built in TypeScript with doubly linked lists. Manage songs with a Spotify-inspired interface, not console-based. Focused on data structures and UI design.",
+          "title": "Professional Portfolio - Modern Web Design",
+          "description": "Professional portfolio website developed with Next.js, React and Tailwind CSS featuring a clean, modern design with informative sidebar. Includes organized sections for work experience with detailed bullets, academic background with visual timeline, categorized technical skills (programming languages, frameworks, tools), and personal hobbies/interests section. The design implements full dark mode, is fully responsive for all devices and optimized for PDF printing. Uses modular React components, advanced grid system with Tailwind CSS and JSON data structure for easy maintenance.",
           "image": "/images/imagen de ejemplo.png",
           "demo": "https://example-portfolio-iota.vercel.app/es"
         }
@@ -311,7 +311,7 @@
         },
         {
           "id": 5,
-          "image": "/images/Realidad virtual.jpg",
+          "image": "/images/RV ultimate.jpg",
           "title": "VR Experiences",
           "text": "I don't stick to a single game; I enjoy discovering and living each digital experience as if it were new. 🎮"
         }
