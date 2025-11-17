@@ -20,84 +20,110 @@ type FooterData = {
   };
 };
 
+function getEffectiveMode(mode: ThemeMode): "light" | "dark" {
+  if (mode === "system" && typeof window !== "undefined") {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  return mode === "dark" ? "dark" : "light";
+}
+
 const Footer = () => {
   const { locale } = useLocale();
   const { mode } = useThemeMode();
+  const [realMode, setRealMode] = useState<"light" | "dark">(getEffectiveMode(mode));
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    function updateRealMode() {
+      setRealMode(getEffectiveMode(mode));
+    }
+    updateRealMode();
+    if (mode === "system") {
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      mq.addEventListener("change", updateRealMode);
+      return () => mq.removeEventListener("change", updateRealMode);
+    }
+  }, [mode]);
+
   if (!mounted) return null;
 
   const t = (data as { [key: string]: { footer: FooterData } })[locale].footer;
 
   const footerBg =
-    mode === "dark"
+    realMode === "dark"
       ? "bg-[#151a31] text-slate-200"
       : "bg-[#1E40AF] text-white";
 
   const cardGlow =
-    mode === "dark"
-      ? "bg-[#232e59]/60 border border-blue-950 shadow-[0_0_18px_0_rgba(30,64,175,0.36)] hover:shadow-[0_0_34px_6px_rgba(30,64,175,0.68)]"
-      : "bg-white/80 text-black border border-blue-200 shadow-md hover:shadow-[0_0_32px_5px_rgba(30,64,175,0.5)]";
+    realMode === "dark"
+      ? "bg-[#232e59]/70 border border-blue-950 shadow-[0_0_18px_0_rgba(30,64,175,0.36)] hover:shadow-[0_0_34px_6px_rgba(30,64,175,0.68)]"
+      : "bg-white/90 text-black border border-blue-200 shadow-md hover:shadow-[0_0_32px_5px_rgba(30,64,175,0.5)]";
 
   const iconBg =
-    mode === "dark"
-      ? "hover:shadow-[0_0_16px_0_rgba(30,64,175,0.65)] hover:bg-[#222f5b]/50"
-      : "hover:shadow-[0_0_18px_0_rgba(30,64,175,0.17)] hover:bg-[#183fae]/10";
+    realMode === "dark"
+      ? "hover:shadow-[0_0_16px_0_rgba(30,64,175,0.65)] hover:bg-[#222f5b]/70"
+      : "hover:shadow-[0_0_18px_0_rgba(30,64,175,0.20)] hover:bg-[#183fae]/20";
 
   return (
-    <footer className={`w-full mt-10 pt-8 pb-2 transition-colors duration-300 ${footerBg}`}>
-      <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row gap-6 md:gap-0 px-4 md:px-12">
+    <footer className={`w-full pt-8 pb-3 transition-colors duration-300 ${footerBg}`}>
+      {/* Contenedor más ancho con mejor balance */}
+      <div className="w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row md:items-stretch gap-8 px-6 lg:px-16">
+        
         {/* Card: Sobre mí */}
         <div
           className={`
-            w-full md:max-w-[60vw]
-            rounded-2xl px-6 py-5 mb-2 md:mb-0
-            mx-auto md:mx-0
-            ${cardGlow}
+            flex-[1.2] min-w-[320px]
+            rounded-2xl px-8 py-6 mb-4 md:mb-0
             transition-all duration-300 cursor-pointer
+            ${cardGlow}
             hover:-translate-y-2
           `}
-          style={{ minWidth: 250 }}
           tabIndex={0}
         >
-          <div className="font-bold text-lg mb-2">{t.aboutTitle}</div>
+          <div className="font-bold text-lg mb-3">{t.aboutTitle}</div>
           <div className="text-base leading-relaxed">{t.aboutMe}</div>
         </div>
-        {/* Block right: contact/rede */}
-        <div className="flex-1 flex flex-col items-center md:items-end gap-3 justify-between w-full">
+
+        {/* Info y Redes */}
+        <div className="flex-[1] flex flex-col justify-center items-center md:items-end gap-6">
           {/* Contacto */}
-          <div className="flex flex-col items-center md:items-end gap-1">
-            <div className="flex items-center gap-2 text-[1rem] break-all">
-              <span>📧</span>
-              <span>{t.email}</span>
+          <div className="flex flex-col md:items-end gap-3 text-base">
+            <div className="flex items-center gap-3">
+              <span className="text-xl">📧</span>
+              <span className="font-medium">{t.email}</span>
             </div>
-            <div className="flex items-center gap-2 text-[1rem]">
-              <span>📞</span>
-              <span>{t.phone}</span>
+            <div className="flex items-center gap-3">
+              <span className="text-xl">📞</span>
+              <span className="font-medium">{t.phone}</span>
             </div>
           </div>
+          
           {/* Redes sociales */}
-          <div className="flex gap-5 mt-2 mb-2 justify-center">
+          <div className="flex gap-6 mt-2">
             <a href={t.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-                className={`rounded-full p-[2px] transition-all duration-200 ${iconBg} hover:-translate-y-2`}>
-              <Image src="/images/whatsapp.webp" alt="WhatsApp" width={38} height={38} className="rounded-full" />
+              className={`rounded-full p-1 transition-all duration-200 ${iconBg} hover:-translate-y-2 hover:scale-110`}>
+              <Image src="/images/whatsapp.webp" alt="WhatsApp" width={42} height={42} className="rounded-full" />
             </a>
             <a href={t.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-                className={`rounded-full p-[2px] transition-all duration-200 ${iconBg} hover:-translate-y-2`}>
-              <Image src="/images/github.png" alt="GitHub" width={38} height={38} className="rounded-full" />
+              className={`rounded-full p-1 transition-all duration-200 ${iconBg} hover:-translate-y-2 hover:scale-110`}>
+              <Image src="/images/github.png" alt="GitHub" width={42} height={42} className="rounded-full" />
             </a>
             <a href={t.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-                className={`rounded-full p-[2px] transition-all duration-200 ${iconBg} hover:-translate-y-2`}>
-              <Image src="/images/linkedin.png" alt="LinkedIn" width={38} height={38} className="rounded-full" />
+              className={`rounded-full p-1 transition-all duration-200 ${iconBg} hover:-translate-y-2 hover:scale-110`}>
+              <Image src="/images/linkedin.png" alt="LinkedIn" width={42} height={42} className="rounded-full" />
             </a>
             <a href={t.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-                className={`rounded-full p-[2px] transition-all duration-200 ${iconBg} hover:-translate-y-2`}>
-              <Image src="/images/Instagram.webp" alt="Instagram" width={38} height={38} className="rounded-full" />
+              className={`rounded-full p-1 transition-all duration-200 ${iconBg} hover:-translate-y-2 hover:scale-110`}>
+              <Image src="/images/Instagram.webp" alt="Instagram" width={42} height={42} className="rounded-full" />
             </a>
           </div>
         </div>
       </div>
-      <div className="text-center mt-5 text-xs opacity-75">{t.copyright}</div>
+      
+      {/* Copyright */}
+      <div className="text-center mt-6 text-xs opacity-75">{t.copyright}</div>
     </footer>
   );
 };
