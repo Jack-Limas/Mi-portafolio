@@ -94,7 +94,7 @@ export default function Navbar() {
           </ul>
           <div className="flex gap-2 items-center flex-wrap">
             <a
-              href="/cv.pdf"
+              href="/docs/Jack_Limas_CV_2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={`${navBtn} px-2 py-1 rounded font-bold text-xs transition`}
